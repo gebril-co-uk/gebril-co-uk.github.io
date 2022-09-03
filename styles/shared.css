@@ -1,0 +1,34 @@
+body {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  color: #323232;
+  background-color: #fdfdfd;
+  font-family: 'Quicksand', sans-serif;
+  overflow-x: hidden;
+  font-size: 18;
+}
+
+.page {
+  max-width: 800px;
+  margin-bottom: 45px;
+  margin: auto;
+  margin-top: 45px;
+  padding: 20px;
+}
+
+th {
+  text-align: left;
+  font-weight: 100;
+  text-decoration: underline;
+}
+
+table {
+  font-size: 18;
+}
+
+@media only screen and (max-device-width: 600px) {
+    body {
+        zoom: 200%;
+    }
+}

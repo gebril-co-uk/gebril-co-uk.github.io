@@ -1,0 +1,82 @@
+#navbar
+{
+	width: 100%;
+	padding-top: 17px;
+	padding-bottom: 15px;
+	background-color: #4A9DFF;
+	z-index: 100000;
+  position: fixed;
+  top: 0;
+}
+.innernav
+{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 90%;
+	margin: 0 auto;
+}
+.navtext
+{
+	padding-bottom: 20px;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color: black;
+}
+
+ /* unvisited link */
+.navlinks li a:link {
+  color: white;
+}
+
+/* visited link */
+.navlinks li a:visited {
+  color: white;
+}
+
+/* mouse over link */
+.navlinks li a:hover {
+  color: white;
+}
+
+/* selected link */
+.navlinks li a:active {
+  color: white;
+}
+
+ /* unvisited link */
+.logo li a:link {
+  color: white;
+  font-weight: 900;
+}
+
+/* visited link */
+.logo li a:visited {
+  color: white;
+}
+
+/* mouse over link */
+.logo li a:hover {
+  color: white;
+}
+
+/* selected link */
+.logo li a:active {
+  color: white;
+}
+
+#navbar li {
+  list-style-type: none;
+  font-size: 16;
+}
+
+.navlinks li
+{
+  padding-left: 30px;
+}
+
+.logo li{
+  font-size: 20;
+}

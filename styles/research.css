@@ -12,7 +12,7 @@
 }
 
 .grid-container > div:hover{
-  background-color:rgb(18,18,18);
+  background-color:rgb(230,230,230);
 }
 
 .grid-container > div > a{
@@ -20,6 +20,7 @@
   width: 100%;
   display:block;
   text-decoration:none;
+  color:red;  
 }
 
 .item1 {

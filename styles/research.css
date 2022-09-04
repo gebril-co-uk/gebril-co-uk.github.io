@@ -29,6 +29,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   border-radius: 3px;
+  color:red;
 }
 
 .item1 a {

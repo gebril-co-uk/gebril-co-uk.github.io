@@ -39,7 +39,7 @@
 .subheading {
   font-size: 18;
   font-weight: 400;
-  color: #ff0000;  
+  color: rgb(245,245,245); 
 }
 
 .topic_header {

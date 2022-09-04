@@ -20,7 +20,7 @@
   width: 100%;
   display:block;
   text-decoration:none;
-  color:red;  
+
 }
 
 .item1 {
@@ -40,7 +40,7 @@
 .subheading {
   font-size: 18;
   font-weight: 400;
-  color:red;              /*<------------ added */
+  color:blue;              /*<------------ added */
 }
 
 .topic_header {

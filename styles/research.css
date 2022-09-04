@@ -20,6 +20,7 @@
   width: 100%;
   display:block;
   text-decoration:none;
+  color:deepskyblue;
 }
 
 .item1 {
@@ -29,17 +30,19 @@
   overflow: hidden;
   text-overflow: ellipsis;
   border-radius: 3px;
+  color:indigo;
 }
 
 .item1 a {
   overflow: hidden;
   text-overflow: ellipsis;
+  color:red;
 }
 
 .subheading {
   font-size: 18;
   font-weight: 400;
-  color:red;
+  color:blue;
 }
 
 .topic_header {

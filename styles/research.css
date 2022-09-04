@@ -6,7 +6,7 @@
 
 .grid-container > div {
   background-color:rgb(245,245,245);
-  border: 1px solid rgb(18,18,18);
+  border: 1px solid rgb(210,210,210);
   font-size: 18;
   margin-bottom: 5px;
 }
@@ -39,7 +39,7 @@
 .subheading {
   font-size: 18;
   font-weight: 400;
-  font-color: blue;  
+  font-color: 18;  
 }
 
 .topic_header {

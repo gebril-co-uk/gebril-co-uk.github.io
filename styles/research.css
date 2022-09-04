@@ -12,7 +12,7 @@
 }
 
 .grid-container > div:hover{
-  background-color:rgb(230,230,230);
+  background-color:rgb(18,18,18);
 }
 
 .grid-container > div > a{
@@ -20,7 +20,7 @@
   width: 100%;
   display:block;
   text-decoration:none;
-  color:deepskyblue;
+  /* can change the color of the text in the box:  color:deepskyblue;   */
 }
 
 .item1 {
@@ -29,14 +29,12 @@
   text-align: left;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-radius: 3px;
-  color:indigo;
+  border-radius: 3px;                  
 }
 
 .item1 a {
   overflow: hidden;
   text-overflow: ellipsis;
-  color:red;
 }
 
 .subheading {

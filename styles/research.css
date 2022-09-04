@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 10fr;
   gap: 5px;
-  color:blue;
 }
 
 .grid-container > div {

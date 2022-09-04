@@ -37,6 +37,10 @@
   border-radius: 3px;
 }
 
+.item2 a{
+  color: red;
+}
+
 .item1 a {
   overflow: hidden;
   text-overflow: ellipsis;

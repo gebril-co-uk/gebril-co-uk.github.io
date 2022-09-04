@@ -34,13 +34,12 @@
 .item1 a {
   overflow: hidden;
   text-overflow: ellipsis;
-  color:blue;
 }
 
 .subheading {
   font-size: 18;
   font-weight: 400;
-  color:blue;
+  color:red;
 }
 
 .topic_header {

@@ -8,21 +8,25 @@
   grid-template-columns: 7fr 3fr;
 }
 
-.grid-container > .item1 {
+.equipment {
+  grid-template-columns: 3fr 7fr;
+}
+
+.grid-container > div {
   background-color:rgb(245,245,245);
   border: 1px solid rgb(210,210,210);
   font-size: 18;
   margin-bottom: 5px;
 }
 
-.grid-container > .item1 > a{
+.grid-container > div > a{
   height: 100%;
   width: 100%;
   display:block;
   text-decoration:none;
 }
 
-.item1 {
+.item1, .item2{
   grid-row-start: 1;
   grid-row-end: 3;
   text-align: left;

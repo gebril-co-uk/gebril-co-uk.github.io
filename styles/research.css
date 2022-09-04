@@ -23,6 +23,7 @@
 }
 
 .item1 {
+  color: red;
   grid-row-start: 1;
   grid-row-end: 3;
   text-align: left;
@@ -34,13 +35,12 @@
 .item1 a {
   overflow: hidden;
   text-overflow: ellipsis;
-  color:red;
 }
 
 .subheading {
   font-size: 18;
   font-weight: 400;
-  color:red;
+  color:red;              /*<------------ added */
 }
 
 .topic_header {

@@ -49,6 +49,7 @@
 .subheading {
   font-size: 18;
   font-weight: 400;
+  color:#4A9DFF;                   /* I added to change the title of the course*/
 }
 
 .topic_header {

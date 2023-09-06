@@ -11,6 +11,69 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap">
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            flex-basis: calc(50% - 20px); /* 50% width with some margin */ I can change these for example 40px, higher for more margin
+            margin: 10px; /* Add margin for spacing */
+            margin-bottom: 40px; /* Add space below each item */  /* Or */ /* padding-bottom: 20px; /* Add space inside each item */
+            /* position: relative; /* Add position:relative to the item container */
+
+        }
+
+        .item img {
+            max-width: 100%;
+            height: auto;
+            /*display: block; /* Ensure the images and videos don't have extra spacing */
+
+        }
+
+        .video {
+            position: relative; /* Add position:relative to the video container */
+
+        }
+
+        .video video {
+            max-width: 100%;
+            height: auto;
+
+        }
+
+        .explanation {
+            text-align: left;
+            margin-top: 10px;
+            background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a semi-transparent background */
+            padding: 0px; /* Optional: Add padding for better visibility */
+        /*  position: absolute; /* Add position:absolute to explanations */
+        /*  bottom: 0; /* Place explanations at the bottom of their respective containers */
+        /*  left: 0;
+        /*  right: 0;
+
+        }
+    </style>
+
+
+
+
 </head>
 
 <body>
@@ -34,17 +97,73 @@
         </div>
     </div>
 
+
+
+
+
     <div class="page">
+    <div class="container">
+        <div class="item">
+            <img src="image1.png" style="width:100%;" alt="Image 1">
+            <div class="explanation">El-Fallah was appointed as Lecturer in the Mechanics of Materials Group within
+                            the University of Leicester's School of Engineering in early 2022. Before arriving
+                            in Leicester ....................................................................</div> 
+        </div>
+        <div class="item">
+            <img src="image1.png" style="width:100%;" alt="Image 2">
+            <div class="explanation">Explanation for Image 2</div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="item">
+                <video controls
+                <source src="test.mp4" style="width:100%;" stype="video/mp4">  
+                    */ I can use <!video controls width="640" height="360"> to specify width and height but not good */
+                Your browser does not support the video tag.
+            </video>
+            <div class="explanation">Explanation for Video 1</div>
+        </div>
+        <div class="item">
+                <video controls 
+                <source src="test.mp4" style="width:100%;" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="explanation">Explanation for Video 2</div>
+        </div>
+    </div>
+
+
+
+
+                
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
     <h1>My Video</h1>
-    <video controls width="640" height="360">
-        <source src="test.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+                        <video controls width="640" height="360">
+                       <source src="test.mp4" type="video/mp4">
+                       Your browser does not support the video tag.
+                      </video>
+          
+
+            
+               
+    
 
 
 

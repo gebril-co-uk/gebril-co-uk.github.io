@@ -24,10 +24,16 @@
         }
 
         .item {
-            flex-basis: calc(50% - 20px); /* 50% width with some margin */ I can change these for example 40px, higher for more margin
+            flex-basis: calc(50% - 8px); /* 50% width with some margin */ I can change these for example 40px, higher for more margin
             margin: 10px; /* Add margin for spacing */
             margin-bottom: 40px; /* Add space below each item */  /* Or */ /* padding-bottom: 20px; /* Add space inside each item */
             /* position: relative; /* Add position:relative to the item container */
+            grid-row-start: 1;
+            grid-row-end: 3;
+            text-align: left;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border-radius: 3px;
 
 
 
@@ -149,6 +155,14 @@
         </div>
 
 
+
+
+
+
+
+
+
+    <div class="page">
         <div class="container">
             <div class="item">
                 <img src="IPF-Z-with1.png" style="width:100%;" alt="Image 1">
@@ -161,9 +175,9 @@
                 <img src="IPF-Z-without1.png" style="width:100%;" alt="Image 2">
                 <div class="explanation">
                              EBSD orientation image, sample transformed isothermally at 250&deg;C for 150 h followed by cooling to ambient temperature. Grain boundary nucleated bainite.
-                        </div>
-                </div>
-         </div>
+                         </div>
+                   </div>
+             </div>
 
 
 

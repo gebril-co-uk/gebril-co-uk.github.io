@@ -20,6 +20,7 @@
             justify-content: space-between;
             align-items: flex-start;
             flex-wrap: wrap;
+            
         }
 
         .item {
@@ -27,6 +28,8 @@
             margin: 10px; /* Add margin for spacing */
             margin-bottom: 40px; /* Add space below each item */  /* Or */ /* padding-bottom: 20px; /* Add space inside each item */
             /* position: relative; /* Add position:relative to the item container */
+
+
 
         }
 
@@ -51,6 +54,7 @@
         .explanation {
             text-align: left;
             margin-top: 10px;
+           /* margin-bottom: 40px;*/
             background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a semi-transparent background */
             padding: 0px; /* Optional: Add padding for better visibility */
         /*position: absolute; /* Add position:absolute to explanations */
@@ -59,13 +63,27 @@
         /*right: 0;*/
 
         }  
+
+        /*.page {
+         /* margin: 0; */ /* Remove default margins */  /* this will delete all the bage sitting including shifting all thed data to th left*/ 
+        /*padding: 0; /* Remove default padding 
+        } */
+
+        /* .page h3 { 
+        margin-top: 80px; /* Add margin to the title to control spacing */
+        /* padding: 0; */ /* Remove default padding
+
+        } */
         
     </style>
 
-
-
-
 </head>
+
+
+
+
+
+
 
 <body>
     <div class="nav" id="navbar">
@@ -90,7 +108,7 @@
 
   
 
-  <div class="page"> 
+    <div class="page"> 
         <h3>About</h3>
             <div class="grid-container">
                 <div class="item1">
@@ -112,7 +130,30 @@
 
 
 
-  
+    <div class="page">
+            <div class="item">
+                <img src="SEM.png" style="width:100%;" alt="Image 3">
+                <div class="explanation">
+                            SEM of partial bainitic transformation, formed after transformation at 250&deg;C for 10 h (a) with NiAl. The arrow indicates the intragranular nucleation of bainite from the NiAl precipitates. (b) Without NiAl, nucleation is from the austenite grain boundaries.
+                </div>
+            </div>
+        </div>
+
+    <div class="page">
+            <div class="item">
+                <img src="TEM.png" style="width:100%;" alt="Image 3">
+                <div class="explanation">
+                             STEM bright field images of the transformed alloy. Microstructure of an interrupted bainitic transformation at 250&deg;C for (a) 10 h. (b) 50 h, (b) shows the the nucleation of bainite from the NiAl precipitates where the bainite is seen to grow into many directions.
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
 
 
     <div class="page">
@@ -129,15 +170,21 @@
         </div>
 
 
+
+
+
+
+
+
         <div class="container">
             <div class="item">
-                <img src="IPF-Z-with.png" style="width:100%;" alt="Image 1">
+                <img src="IPF-Z-with1.png" style="width:100%;" alt="Image 1">
                    <div class="explanation">EBSD orientation image, sample transformed isothermally at 250&deg;C for 150 h followed by cooling to ambient temperature. Bainite nucleated from NiAl promotes a more chaotic and finer bainite structure. </div> 
                          </div>
 
             <div class="item">
-                <img src="IPF-Z-without.png" style="width:100%;" alt="Image 2">
-                <div class="explanation">EBSD orientation image, sample transformed isothermally at 250&deg;C for 150 h followed by cooling to ambient temperature. Grain boundary nucleated bainite</div>
+                <img src="IPF-Z-without1.png" style="width:100%;" alt="Image 2">
+                <div class="explanation">EBSD orientation image, sample transformed isothermally at 250&deg;C for 150 h followed by cooling to ambient temperature. Grain boundary nucleated bainite.</div>
             </div>
         </div>
 
@@ -145,6 +192,33 @@
 
 
 
+
+
+
+
+            <div class="item">
+                <img src="Pole-figures.png" style="width:100%;" alt="Image 3">
+                <div class="explanation">Pole figures from a parent austenite grain, (a and b) {100}&gamma; pole figure, (c and d) corresponding {100}&alpha; pole figure, more variants within the austenite grain (c).
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="page">
         <div class="container">
             <div class="item">
                     <video controls

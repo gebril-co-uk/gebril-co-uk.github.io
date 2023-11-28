@@ -13,6 +13,63 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap">
 </head>
 
+
+<!--  text-align: justify; property helps in distributing the text evenly within the container, and the line-height property controls the spacing between lines.  -->
+
+<<style>
+    .topic_content {
+        max-height: 350px; /* Adjust as needed */
+        overflow: hidden;
+        text-align: justify;
+        gap: 5px; /* Adjust as needed */ /* or use  line-height: 1.5; */
+        flex: 100; /* Added to make it take the remaining space */
+    }
+
+    .grid-container > div {
+        background-color: rgb(245, 245, 245);
+        border: 1px solid rgb(210, 210, 210);
+        font-size: 18px; /* Corrected the unit for font-size */
+        margin-bottom: 5px;
+        display: flex; /* Added flex display to align image and text */
+    }
+
+    .grid-container > div > a {
+        height: 100%;
+        width: 100%;
+        display: flex; /* Added flex display to align image and text */
+        text-decoration: none;
+    }
+
+    .item_image {
+        flex: 0 0 auto; /* Added to prevent image from growing */
+    }
+
+    .image {
+        object-fit: cover; /* Added to ensure the image covers the entire container same as  padding: 0px; */
+    }
+
+
+</style>
+
+
+
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
 <body>
     <div class="nav" id="navbar">
         <div class="innernav">
@@ -66,6 +123,28 @@
 
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <h4 class="subheading">Wang Pengxin</h4>
 

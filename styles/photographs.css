@@ -1,0 +1,102 @@
+/* photographs.css */
+
+
+ .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    margin-bottom: 50px;
+}
+  .grid-container > div {
+          background-color: rgb(245, 245, 245);
+          border: 1px solid rgb(210, 210, 210);
+          font-size: 18px; /* Corrected the unit for font-size */
+          display: flex; /* Added flex display to align image and text */
+          align-items: center;
+          padding: 10px;
+      }
+
+  .grid-container > div:hover{
+    background-color:rgb(230,230,230);        /* when you put the mouse */
+  }
+  
+
+   .grid-container > div > a{
+      height: 100%;
+      width: 100%;
+      display:block;
+      text-decoration:none;
+    }
+
+ .topic_content {
+        max-height: 350px; /* Adjust as needed */
+        overflow: hidden;
+        text-align: justify;
+        gap: 5px; /* Adjust as needed */ /* or use  line-height: 1.5; */
+        flex: 1; /* Added to make it take the remaining space */
+        font-size: 18px;
+        font-weight: 40;
+        /*  color:#4A9DFF;   */
+        /*margin: 10px;  */
+    }
+
+    
+    
+.photograph_gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px; /* Increased gap between photos */
+    justify-content: space-around;
+}
+
+.photograph_item {
+    flex: 1 1 calc(33.333% - 40px); /* Adjust this value as needed */
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 40px; /* Increase margin for spacing */
+    font-size: 18px;
+    font-weight: 40;
+    ext-align: left;
+
+
+}
+
+.photograph_item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 3px;
+
+}
+
+
+
+
+.video_gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-around;
+    margin-top: 40px; /* Add space above the video gallery */
+    font-size: 18px;
+    font-weight: 40;
+}
+
+.video_item {
+    flex: 1 1 calc(50% - 40px); /* Adjust this value as needed */
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 40px; /* Increase margin for spacing */
+}
+
+.video_item video {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+

@@ -45,7 +45,7 @@
 .photograph_gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 60px; /* Increased gap between photos */
+    gap: 10px; /* Increased gap between photos */
     justify-content: space-around;
 }
 

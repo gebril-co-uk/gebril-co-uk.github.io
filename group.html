@@ -26,7 +26,7 @@
         background-color: rgb(245, 245, 245);
         border: 1px solid rgb(210, 210, 210);
         font-size: 18px; /* Corrected the unit for font-size */
-        margin-bottom: 5px;
+        margin-bottom: 50px;
         display: flex; /* Added flex display to align image and text */
     }
 
@@ -44,7 +44,56 @@
     .image {
         object-fit: cover; /* Added to ensure the image covers the entire container same as  padding: 0px; */
     }
+
+
+    .subheading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding-right: 250px; /* Space on right for icons */
+           
+    }
+
+        .title {
+            font-size: 1em;
+            margin-top: 2px; /* Reduced space between name and title */
+    }
+
+        .contact-icons {
+            display: flex;
+            gap: 8px;
+            cursor: pointer;
+    }
+
+        /* Active icon color */
+        .active,
+        .contact-icons i:hover { /* Hover and active color */
+            color: #007bff; /* Change to desired color */
+    }
+
+
+
+
+        /* Phone number display styling */
+        .contact-info {
+            display: none;
+            font-size: 1em;
+            color: #ff4500; /* Initial orange color */
+            transition: color 0.5s ease; /* Smooth color transition */
+    }
+
+        /* Green color for phone number after a delay */
+        .contact-info.active {
+            color: #32cd32; /* Green color */
+    }
+
 </style>
+
+
+
 
 
 
@@ -73,7 +122,25 @@
 
         <h3>Group Members</h3>
 
-        <h4 class="subheading">Gebril El-Fallah</h4>
+
+        <!-- Member: Gebril El-Fallah -->
+        <div class="subheading">
+            Gebril El-Fallah
+            <div class="contact-icons">
+                <!-- Email icon opens the default email client -->
+                <a href="mailto:gmae2@leicester.ac.uk" title="Email Gebril" onclick="toggleIconColor(this)">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <!-- Phone icon toggles display of phone number and changes color -->
+                <i class="fa fa-phone" onclick="togglePhoneNumber('contact-geb', this)" title="Show Phone Number"></i>
+            </div>
+        </div>
+        <div class="title">Lecturer in Mechanical and Materials Engineering</div>
+
+        <div id="contact-geb" class="contact-info" style="display: none;">
+            Phone: +441162525659
+        </div>
+
 
         <div class="home_item">
             <div class="grid-container profile">
@@ -103,8 +170,27 @@
         </div>
 
 
+ 
 
-        <h4 class="subheading">Wang Pengxin</h4>
+
+
+
+
+        <!-- Member: Pengxin Wang -->
+        <div class="subheading">
+            Pengxin Wang
+            <div class="contact-icons">
+                <a href="mailto:pxw1@leicester.ac.uk" title="Email Pengxin" onclick="toggleIconColor(this)">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <i class="fa fa-phone" onclick="togglePhoneNumber('contact-wang', this)" title="Show Phone Number"></i>
+            </div>
+        </div>
+        <div class="title">PhD Student</div>
+
+        <div id="contact-wang" class="contact-info">
+            Phone: +987654321
+        </div>
 
         <div class="home_item">
             <div class="grid-container profile">
@@ -207,7 +293,63 @@
 
 
 
-        
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- JavaScript to toggle phone number display and color change -->
+        <script>
+            function togglePhoneNumber(id, icon) {
+                const info = document.getElementById(id);
+
+                // Initially set the phone number to visible and orange
+                info.style.display = info.style.display === 'none' ? 'block' : 'none';
+                icon.classList.toggle('active'); // Toggle icon's active color
+                
+                // After a brief delay, apply the "active" class for green transition
+                if (info.style.display === 'block') {
+                    setTimeout(() => info.classList.add('active'), 800); // 800ms delay
+                    setTimeout(() => { 
+                        info.style.display = 'none'; // Hide after 3 seconds
+                        info.classList.remove('active'); // Reset color
+                        icon.classList.remove('active'); // Remove active color from icon
+                    }, 3000);
+                }
+            }
+
+            // Change email icon color on click
+            function toggleIconColor(element) {
+                const icon = element.querySelector('i');
+                icon.classList.toggle('active');
+            }
+        </script>
     </div>
 </body>

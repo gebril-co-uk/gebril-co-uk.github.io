@@ -460,38 +460,36 @@
 
 
             function toggleWeChat(id, icon) {
-    console.log('WeChat icon clicked');  // Debugging statement
-    const weChatInfo = document.getElementById(id);
-    const weChatID = weChatInfo.querySelector('#wechat-id');
-    
-    // Check the current display state using getComputedStyle
-    const currentDisplay = window.getComputedStyle(weChatInfo).display;
-    
-    // Show or hide QR code based on current display state
-    if (currentDisplay === "none") {
-        // Show WeChat info
-        weChatInfo.style.display = "block";
+            console.log('WeChat icon clicked');  // Debugging statement
+            const weChatInfo = document.getElementById(id);
+            const weChatID = weChatInfo.querySelector('#wechat-id');
+            
+            // Check the current display state using getComputedStyle
+            const currentDisplay = window.getComputedStyle(weChatInfo).display;
+            
+            // Show or hide QR code based on current display state
+            if (currentDisplay === "none") {
+                // Show WeChat info
+                weChatInfo.style.display = "block";
+                
+                // Initially show the orange color
+                weChatID.classList.remove('active');
+                
+                // Apply the green transition after a delay
+                setTimeout(() => weChatID.classList.add('active'), 800); // 800ms delay
+                
+                // Auto-hide WeChat info and reset after 3 seconds
+                setTimeout(() => {
+                    weChatInfo.style.display = 'none';
+                    weChatID.classList.remove('active'); // Reset color
+                }, 3000);
+            } else {
+                // Hide WeChat info if already displayed
+                weChatInfo.style.display = "none";
+                weChatID.classList.remove('active'); // Reset color
+            }
+        }
         
-        // Initially show the orange color
-        weChatID.classList.remove('active');
-        
-        // Apply the green transition after a delay
-        setTimeout(() => weChatID.classList.add('active'), 800); // 800ms delay
-        
-        // Auto-hide WeChat info and reset after 3 seconds
-        setTimeout(() => {
-            weChatInfo.style.display = 'none';
-            weChatID.classList.remove('active'); // Reset color
-        }, 3000);
-    } else {
-        // Hide WeChat info if already displayed
-        weChatInfo.style.display = "none";
-        weChatID.classList.remove('active'); // Reset color
-    }
-}
-
-
-
           
 
         </script>

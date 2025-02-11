@@ -26,7 +26,7 @@
         background-color: rgb(245, 245, 245);
         border: 1px solid rgb(210, 210, 210);
         font-size: 18px; /* Corrected the unit for font-size */
-        margin-bottom: 5px;
+        margin-bottom: 50px;
         display: flex; /* Added flex display to align image and text */
     }
 
@@ -44,7 +44,86 @@
     .image {
         object-fit: cover; /* Added to ensure the image covers the entire container same as  padding: 0px; */
     }
+
+
+    .subheading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding-right: 250px; /* Space on right for icons */
+           
+    }
+
+        .title {
+            font-size: 1em;
+            margin-top: 2px; /* Reduced space between name and title */
+    }
+
+        .contact-icons {
+            display: flex;
+            gap: 8px;
+            cursor: pointer;
+    }
+
+        /* Hover effect for WeChat: Turns green */
+            .contact-icons .fa-wechat:hover {
+                color: #32cd32; /* Green color for WeChat */
+    }
+
+
+            
+        /* Hover effect for Phone and Email: Turns blue */
+            .contact-icons .fa-phone:hover,
+            .contact-icons .fa-envelope:hover {
+                color: #1e90ff; /* Blue color for phone and email */
+    }
+
+
+
+        /* Active icon color */
+           .active,
+           .contact-icons i:hover { /* Hover and active color */
+            color: #007bff; /* Change to desired color */
+    }
+
+
+
+
+        /* Phone number display styling */
+        .contact-info {
+            display: none;
+            font-size: 1em;
+            color: #ff4500; /* Initial orange color */
+            transition: color 0.5s ease; /* Smooth color transition */
+    }
+
+        /* Green color for phone number after a delay */
+        .contact-info.active {
+            color: #32cd32 !important; /*  Force Green color */
+    }   
+
+
+
+
+        /* Initial orange color for WeChat ID */
+            #wechat-id {
+                color: #ff4500; /* Initial orange color */
+                transition: color 0.5s ease; /* Smooth color transition */
+    }
+            
+        /* Green color for WeChat ID after a delay */
+             #wechat-id.active {
+                 color: #32cd32 !important; /* Green color */
+     }
+
+
 </style>
+
+
+
 
 
 
@@ -73,7 +152,36 @@
 
         <h3>Group Members</h3>
 
-        <h4 class="subheading">Gebril El-Fallah</h4>
+
+
+        <!-- Member: Gebril El-Fallah -->
+        <div class="subheading">
+            Gebril El-Fallah
+            <div class="contact-icons">
+                <!-- Email icon opens the default email client -->
+                <a href="mailto:gmae2@leicester.ac.uk" title="Email Gebril" onclick="toggleIconColor(this)">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <!-- Phone icon toggles display of phone number and changes color -->
+                <i class="fa fa-phone" onclick="togglePhoneNumber('contact-geb', this)" title="Show Phone Number"></i>
+
+                <!-- WeChat Icon -->
+                <i class="fa fa-wechat" onclick="toggleWeChat('wechat-geb', this)" title="WeChat"></i>
+            </div>
+        </div>
+        <div class="title">Lecturer in Mechanical and Materials Engineering</div>
+
+        <div id="contact-geb" class="contact-info" style="display: none;">
+            Phone: +44 01162525659
+        </div>
+
+        <div id="wechat-geb" class="contact-info">
+            <!-- Replace with actual QR code or WeChat ID -->
+            <img src="files/WeChat-QR-Code/WeChat-Gebril.JPG" alt="WeChat QR Code" style="width: 200px;" />
+            <p id="wechat-id" style="margin-top: 5px;">WeChat ID: Gebril_El-Fallah</p>
+            <!-- Alternatively, display WeChat ID -->
+            <!-- WeChat ID: Gebril_El-Fallah -->
+        </div>
 
         <div class="home_item">
             <div class="grid-container profile">
@@ -103,8 +211,35 @@
         </div>
 
 
+ 
 
-        <h4 class="subheading">Wang Pengxin</h4>
+
+        <!-- Member: Pengxin Wang -->
+        <div class="subheading">
+            Pengxin Wang
+            <div class="contact-icons">
+                <!-- Email icon opens the default email client -->
+                <a href="mailto:pxw1@leicester.ac.uk" title="Email Pengxin" onclick="toggleIconColor(this)">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <!-- Phone icon toggles display of phone number and changes color -->
+                <i class="fa fa-phone" onclick="togglePhoneNumber('contact-Pengxin', this)" title="Show Phone Number"></i>
+
+                <!-- WeChat Icon -->
+                <i class="fa fa-wechat" onclick="toggleWeChat('wechat-Pengxin', this)" title="WeChat"></i>
+            </div>
+        </div>
+        <div class="title">PhD Student</div>
+
+        <div id="contact-Pengxin" class="contact-info" style="display: none;">
+            Phone: +44 07733921693
+        </div>
+
+        <div id="wechat-Pengxin" class="contact-info">
+            <!-- Replace with actual QR code or WeChat ID -->
+            <img src="files/WeChat-QR-Code/WeChat-Pengxin.JPG" alt="WeChat QR Code" style="width: 200px;" />
+            <p id="wechat-id" style="margin-top: 5px;">WeChat ID: PengxinWang0501</p>  
+        </div>
 
         <div class="home_item">
             <div class="grid-container profile">
@@ -126,7 +261,36 @@
             </div>
         </div>
 
-        <h4 class="subheading">Yian Lin</h4>
+
+
+
+        
+        <!-- Member: Yian Lin -->
+        <div class="subheading">
+            Yian Lin
+            <div class="contact-icons">
+                <a href="mailto:yl837@leicester.ac.uk" title="Email Yian" onclick="toggleIconColor(this)">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <i class="fa fa-phone" onclick="togglePhoneNumber('contact-Yian', this)" title="Show Phone Number"></i>
+
+                <!-- WeChat Icon -->
+                <i class="fa fa-wechat" onclick="toggleWeChat('wechat-Yian', this)" title="WeChat"></i>
+
+            </div>
+        </div>
+        <div class="title">PhD Student</div>
+
+        <div id="contact-Yian" class="contact-info" style="display: none;">
+            Phone: +44 07776993824
+        </div>
+
+        <div id="wechat-Yian" class="contact-info">
+            <!-- Replace with actual QR code or WeChat ID -->
+            <img src="files/WeChat-QR-Code/WeChat-Yian.JPG" alt="WeChat QR Code" style="width: 200px;" />
+            <p id="wechat-id" style="margin-top: 5px;">WeChat ID: lya2010106203</p>  
+        </div>
+
 
         <div class="home_item">
             <div class="grid-container profile">
@@ -149,9 +313,35 @@
         </div>
 
 
+        
 
 
-        <h4 class="subheading">Mingda Tian</h4>
+        <!-- Member: Mingda Tian -->
+        <div class="subheading">
+            Mingda Tian
+            <div class="contact-icons">
+                <a href="mailto:mt519@leicester.ac.uk" title="Email Mingda" onclick="toggleIconColor(this)">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <i class="fa fa-phone" onclick="togglePhoneNumber('contact-Mingda', this)" title="Show Phone Number"></i>
+
+                <!-- WeChat Icon -->
+                <i class="fa fa-wechat" onclick="toggleWeChat('wechat-Mingda', this)" title="WeChat"></i>
+            </div>
+        </div>
+        <div class="title">PhD Student</div>
+
+        <div id="contact-Mingda" class="contact-info" style="display: none;">
+            Phone: +44 07742634989 
+        </div>
+
+        <div id="wechat-Mingda" class="contact-info">
+            <!-- Replace with actual QR code or WeChat ID -->
+            <img src="files/WeChat-QR-Code/WeChat-Mingda.JPG" alt="WeChat QR Code" style="width: 200px;" />
+            <p id="wechat-id" style="margin-top: 5px;">WeChat ID: terrace666</p>  
+        </div>
+
+
 
         <div class="home_item">
             <div class="grid-container profile">
@@ -178,8 +368,34 @@
 
 
 
+
+
+         <!-- Member: Shijie Zhang -->
+        <div class="subheading">
+            Shijie Zhang
+            <div class="contact-icons">
+                <a href="mailto:sz295@leicester.ac.uk" title="Email Shijie" onclick="toggleIconColor(this)">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <i class="fa fa-phone" onclick="togglePhoneNumber('contact-Shijie', this)" title="Show Phone Number"></i>
+
+                <!-- WeChat Icon -->
+                <i class="fa fa-wechat" onclick="toggleWeChat('wechat-Shijie', this)" title="WeChat"></i>
+            </div>
+        </div>
+        <div class="title">PhD Student</div>
+
+        <div id="contact-Shijie" class="contact-info" style="display: none;">
+            Phone: +44 07536474745
+        </div>
+
+        <div id="wechat-Shijie" class="contact-info">
+            <!-- Replace with actual QR code or WeChat ID -->
+            <img src="files/WeChat-QR-Code/WeChat-Shijie.JPG" alt="WeChat QR Code" style="width: 200px;" />
+            <p id="wechat-id" style="margin-top: 5px;">WeChat ID: 15103851841</p>  
+        </div>
+
         
-        <h4 class="subheading">Shijie Zhang</h4>
 
         <div class="home_item">
             <div class="grid-container profile">
@@ -207,7 +423,119 @@
 
 
 
-        
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- JavaScript to toggle phone number display and color change -->
+        <script>
+            function togglePhoneNumber(id, icon) {
+                const info = document.getElementById(id);
+
+                // Initially set the phone number to visible and orange
+                info.style.display = info.style.display === 'none' ? 'block' : 'none';
+                icon.classList.toggle('active'); // Toggle icon's active color
+                
+                // After a brief delay, apply the "active" class for green transition
+                if (info.style.display === 'block') {
+                    setTimeout(() => info.classList.add('active'), 800); // 800ms delay
+                    setTimeout(() => { 
+                        info.style.display = 'none'; // Auto Hide after 3 seconds
+                        info.classList.remove('active'); // Reset color
+                        icon.classList.remove('active'); // Remove active color from icon
+                    }, 3000);
+                }
+            }
+
+            // Change email icon color on click
+            function toggleIconColor(element) {
+                const icon = element.querySelector('i');
+                icon.classList.toggle('active');
+            }
+
+
+
+             // for Wechat
+
+
+
+            function toggleWeChat(id, icon) {
+            console.log('WeChat icon clicked');  // Debugging statement
+            const weChatInfo = document.getElementById(id);
+            const weChatID = weChatInfo.querySelector('#wechat-id');
+            
+            // Check the current display state using getComputedStyle
+            const currentDisplay = window.getComputedStyle(weChatInfo).display;
+            
+            // Show or hide QR code based on current display state
+            if (currentDisplay === "none") {
+                // Show WeChat info
+                weChatInfo.style.display = "block";
+                
+                // Initially show the orange color
+                weChatID.classList.remove('active');
+                
+                // Apply the green transition after a delay
+                setTimeout(() => weChatID.classList.add('active'), 800); // 800ms delay
+                
+                // Auto-hide WeChat info and reset after 3 seconds
+                setTimeout(() => {
+                    weChatInfo.style.display = 'none';
+                    weChatID.classList.remove('active'); // Reset color
+                }, 3000);
+            } else {
+                // Hide WeChat info if already displayed
+                weChatInfo.style.display = "none";
+                weChatID.classList.remove('active'); // Reset color
+            }
+        }
+        
+          
+
+        </script>
     </div>
 </body>
+
+
+
+
+
+
+   
+
+        
+
+       
+  
+
+        
+
+       

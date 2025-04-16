@@ -7,6 +7,8 @@
 	z-index: 100000;
   position: fixed;
   top: 0;
+  /* height: 30px;        Add this */
+
 }
 .innernav
 {
@@ -17,7 +19,7 @@
 }
 .navtext
 {
-	padding-bottom: 20px;
+	padding-bottom: 20px;      /* from 20 px to o to remove the extra height */
 }
 
  /* unvisited link */

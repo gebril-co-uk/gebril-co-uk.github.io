@@ -1,0 +1,282 @@
+<head>
+<title>
+        Alloy Design &amp; Phase Transformations Research Group
+    </title>
+<link href="https://gebril.co.uk/files/Favicon.png" rel="icon" type="image/png"/>
+<meta content="The Alloy Design &amp; Phase Transformations Research Group investigates atomic-scale mechanisms in materials, combining chemistry, mechanical testing, and machine learning to design advanced, high-performance alloys." name="description"/>
+<link href="styles/shared.css" rel="stylesheet"/>
+<link href="styles/index.css" rel="stylesheet"/>
+<link href="styles/navbar.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            
+            
+        }
+
+        .item {
+            flex-basis: calc(50% - 8px); /* 50% width with some margin */ I can change these for example 40px, higher for more margin
+            margin: 10px; /* Add margin for spacing */
+            margin-bottom: 40px; /* Add space below each item */  /* Or */ /* padding-bottom: 20px; /* Add space inside each item */
+            /* position: relative; /* Add position:relative to the item container */
+            grid-row-start: 1;
+            grid-row-end: 3;
+            text-align: justify;   /* This makes lines end at the same point */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border-radius: 3px;
+
+
+
+
+        }
+
+        .item img {
+            max-width: 100%;
+            height: auto;
+            /*display: block; /* Ensure the images and videos don't have extra spacing */
+
+        }
+
+        .video {
+            position: relative; /* Add position:relative to the video container */
+
+        }
+
+        .video video {
+            max-width: 100%;
+            height: auto;
+
+        }
+
+        .explanation {
+            text-align: justify;   /* This makes lines end at the same point */
+           /* text-align: left;*/
+            margin-top: 10px;
+           /* margin-bottom: 40px;*/
+            background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a semi-transparent background */
+            padding: 0px; /* Optional: Add padding for better visibility */
+        /*position: absolute; /* Add position:absolute to explanations */
+        /*bottom: 0; /* Place explanations at the bottom of their respective containers */
+        /*left: 0;
+        /*right: 0;*/
+
+        }
+
+
+        /*.page {
+         /* margin: 0; */ /* Remove default margins */  /* this will delete all the bage sitting including shifting all thed data to th left*/ 
+        /*padding: 0; /* Remove default padding 
+        } */
+
+        /* .page h3 { 
+        margin-top: 80px; /* Add margin to the title to control spacing */
+        /* padding: 0; */ /* Remove default padding
+
+        } */
+        
+    </style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TT2JC483');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<div class="nav" id="navbar">
+<div class="innernav">
+<div class="navtext">
+<div class="logo">
+<li style="float: left;"><a href="index">Alloy Design &amp; Phase Transformations Research Group</a></li>
+</div>
+<!--<div class="navcontent" style="display: flex; justify-content: space-between; align-items: center;">
+  <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+    <img src="./files/logo.png" alt="Logo" style="height: 50px; width: auto;">
+    <a href="index" style="color: white; font-weight: 900; text-decoration: none; font-size: 16px;">
+      Advanced Phase Transformations Research Group
+    </a>
+  </div>
+-->
+<div class="navlinks">
+<li style="float: right;"><a href="photographs">Photographs</a></li>
+<li style="float: right;"><a href="equipment">Equipment</a></li>
+<li style="float: right;"><a href="teaching">Teaching</a></li>
+<li style="float: right;"><a href="research">Research</a></li>
+<li style="float: right;"><a href="group">Group</a></li>
+<li style="float: right;"><a href="index">About</a></li>
+</div>
+</div>
+</div>
+</div>
+<div class="page">
+<h3>About</h3>
+<div class="grid-container">
+<div class="item">
+<a>
+<div class="topic_content">
+                            Welcome to the <strong>Alloy Design &amp; Phase Transformations Research Group</strong>. We explore the fundamental mechanisms governing atomic movement and rearrangement in solids under the influence of composition, stress, and temperature, unlocking transformative changes in microstructure and material behaviour. Combining chemistry and process design with advanced characterisation and mechanical testing, we link microstructural evolution to real-world performance. We also harness the power of machine learning to accelerate alloy discovery and optimisation, bridging data science with materials engineering. Our mission is to create reliable, high-performance alloys that push the boundaries of what's possible in modern materials science.
+
+                            
+                        </div>
+</a>
+</div>
+</div>
+
+<!-- Microstructure Zoom Viewer -->
+<div id="openseadragon1" style="width: 100%; height: 500px; margin-top: 40px;"></div>
+<!-- OpenSeadragon Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.js"></script>
+<script>
+  var viewer = OpenSeadragon({
+    id: "openseadragon1",
+    prefixUrl: "https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/images/",
+    tileSources: {
+      type: 'image',
+      url: 'SEM.png'
+    }
+  });
+
+  viewer.addHandler('open', function () {
+    viewer.addOverlay({
+      element: createAnnotation("Image (a): Bainite nucleation from NiAl precipitates"),
+      location: viewer.viewport.imageToViewportCoordinates(0.25, 0.25)
+    });
+    viewer.addOverlay({
+      element: createAnnotation("Image (b): Bainite nucleation from austenite grain boundaries"),
+      location: viewer.viewport.imageToViewportCoordinates(0.75, 0.75)
+    });
+  });
+
+  function createAnnotation(text) {
+    var div = document.createElement("div");
+    div.className = "annotation";
+    div.style.background = "rgba(255,255,255,0.8)";
+    div.style.border = "1px solid #333";
+    div.style.padding = "4px";
+    div.style.fontSize = "14px";
+    div.innerText = text;
+    return div;
+  }
+</script>
+<style>
+  .annotation {
+    position: absolute;
+    z-index: 9999;
+  }
+</style>
+</div>
+<!-- Microstructure Zoom Viewer -->
+<div id="openseadragon1" style="width: 100%; height: 500px; margin-top: 40px;"></div>
+<!-- OpenSeadragon Library -->
+https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.js
+
+<script>
+  var viewer = OpenSeadragon({
+    id: "openseadragon1",
+    prefixUrl: "https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/images/",
+    tileSources: {
+      type: 'image',
+      url: 'SEM.png' // Make sure this path is correct and accessible
+    }
+  });
+
+  viewer.addHandler('open', function () {
+    viewer.addOverlay({
+      element: createAnnotation("Image (a): Bainite nucleation from NiAl precipitates"),
+      location: viewer.viewport.imageToViewportCoordinates(0.25, 0.25)
+    });
+    viewer.addOverlay({
+      element: createAnnotation("Image (b): Bainite nucleation from austenite grain boundaries"),
+      location: viewer.viewport.imageToViewportCoordinates(0.75, 0.75)
+    });
+  });
+
+  function createAnnotation(text) {
+    var div = document.createElement("div");
+    div.className = "annotation";
+    div.style.background = "rgba(255,255,255,0.8)";
+    div.style.border = "1px solid #333";
+    div.style.padding = "4px";
+    div.style.fontSize = "14px";
+    div.innerText = text;
+    return div;
+  }
+</script>
+<style>
+  .annotation {
+    position: absolute;
+    z-index: 9999;
+  }
+</style>
+<div class="page">
+<div class="item1">
+<img alt="Image 3" src="SEM.png" style="width:100%;"/>
+<div class="explanation">
+                            SEM of partial bainitic transformation, formed after transformation at 250°C for 10 h (a) with NiAl. The arrow indicates the intragranular nucleation of bainite from the NiAl precipitates. (b) Without NiAl, nucleation is from the austenite grain boundaries.
+                </div>
+</div>
+</div>
+<div class="page">
+<div class="item1">
+<img alt="Image 3" src="TEM.png" style="width:100%;"/>
+<div class="explanation">
+                             STEM bright field images of the transformed alloy. Microstructure of an interrupted bainitic transformation at 250°C for (a) 10 h. (b) 50 h, (b) shows the the nucleation of bainite from the NiAl precipitates where the bainite is seen to grow into many directions.
+                </div>
+</div>
+</div>
+<div class="page">
+<div class="container">
+<div class="item">
+<img alt="Image 1" src="IPF-Z-with1.png" style="width:100%;"/>
+<div class="explanation">
+                             EBSD orientation image, sample transformed isothermally at 250°C for 150 h followed by cooling to ambient temperature. Bainite nucleated from NiAl promotes a more chaotic and finer bainite structure. 
+                         </div>
+</div>
+<div class="item">
+<img alt="Image 2" src="IPF-Z-without1.png" style="width:100%;"/>
+<div class="explanation">
+                             EBSD orientation image, sample transformed isothermally at 250°C for 150 h followed by cooling to ambient temperature. Grain boundary nucleated bainite.
+                         </div>
+</div>
+</div>
+<div class="item">
+<img alt="Image 3" src="Pole-figures.png" style="width:100%;"/>
+<div class="explanation">Pole figures from a parent austenite grain, (a and b) {100}γ pole figure, (c and d) corresponding {100}α pole figure, more variants within the austenite grain (c).
+                </div>
+</div>
+</div>
+<div class="page">
+<div class="container">
+<div class="item">
+<video <source="" controls="" src="test.mp4" style="width:100%;" stype="video/mp4">  
+                        */ I can use <!--video controls width="640" height="360"--> to specify width and height but not good */
+                    Your browser does not support the video tag.
+                </video>
+<div class="explanation">Explanation for Video 1</div>
+</div>
+<div class="item">
+<video <source="" controls="" src="test.mp4" style="width:100%;" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+<div class="explanation">Explanation for Video 2</div>
+</div>
+</div>
+<h1>My Video</h1>
+<video controls="" height="360" width="640">
+<source src="test.mp4" type="video/mp4"/>
+                       Your browser does not support the video tag.
+                      </video>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TT2JC483" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+</div></body>

@@ -1,0 +1,216 @@
+
+<head>
+    <meta charset="UTF-8">
+    <title>Physically-and Knowledge-Informed Deep Learning for Robust Prediction of Martensite Start Temperature in Steels</title>
+    <meta name="description" content="Explore a data-driven machine learning approach for predicting Martensite Start Temperature in Steels.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/png" href="https://gebril.co.uk/files/Favicon.png"/>
+    <link rel="stylesheet" href="styles/shared.css">
+    <link rel="stylesheet" href="styles/research.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles/photographs.css"> <!-- Link to the new CSS file -->
+
+<style>
+.abstract-box {
+        max-height: 850px; /* Adjust as needed */
+        overflow: hidden;
+        text-align: justify;
+        gap: 5px; /* Adjust as needed */ /* or use  line-height: 1.5; */
+        flex: 1; /* Added to make it take the remaining space */
+        font-size: 18px;
+        font-weight: 40;
+        font-family: 'Arial', sans-serif;
+        color: #111111;
+        /*  color:#4A9DFF;   */
+        /*margin: 10px;  */
+    
+     }
+
+     .links {
+    margin-top: 20px;
+        }
+
+
+
+    .links ul li a:link, 
+.links ul li a:active {
+    color: blue;
+    text-decoration: none;
+}
+.links ul li a:hover {
+    text-decoration: underline;
+}
+.links ul li a:visited, 
+.links ul li a:active {
+    color: darkred;
+}
+.links ul li a:hover {
+    text-decoration: underline;
+}
+.links ul li a:visited {
+    color: darkred !important;
+}
+
+</style>
+
+
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+</head>
+<body>
+    <div class="nav" id="navbar">
+        <div class="innernav">
+            <div class="navtext">
+                <div class="logo">
+                    <li style="float: left;"><a href="index">Alloy Design & Phase Transformations Research Group</a></li>
+                </div>
+                <div class="navlinks">
+                    <li style="float: right;"><a href="photographs">Photographs</a></li>
+                    <li style="float: right;"><a href="equipment">Equipment</a></li>
+                    <li style="float: right;"><a href="teaching">Teaching</a></li>
+                    <li style="float: right;"><a href="research">Research</a></li>
+                    <li style="float: right;"><a href="group">Group</a></li>
+                    <li style="float: right;"><a href="index">About</a></li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="page">
+         <h1 style="color: darkred; text-align: center; font-size: 24px;">Physically-and Knowledge-Informed Deep Learning for Robust Prediction of Martensite Start Temperature in Steels</h1>
+
+        <h1 style="color: black; text-align: center;font-size: 20px;">Pengxin Wang and G. M. A. M. El-Fallah</h1>
+
+        <h3 style="text-align: center; margin-bottom: 5px;">Abstract</h3>
+
+        
+
+            <!-- <div class="grid-container"> -->
+                <div class="abstract-box">
+                        Accurate prediction of the martensite start temperature (Mₛ) is essential for optimising the mechanical performance of steels and enabling data-driven alloy design. This study proposes, for the first time, a physics- and knowledge-informed multi-branch Transformer fusion model that integrates chemical composition, physical features, and empirical equation-based features for precise Mₛ prediction. A curated dataset of 1,100 steel samples was compiled from the literature, encompassing a comprehensive range of compositional and physical variables relevant to phase transformation behaviour. The model architecture employs dedicated multilayer perceptron (MLP) branches for each feature group, followed by a Transformer encoder to capture global dependencies and nonlinear interactions. Compared with baseline models, including conventional MLPs and lasso regression, the proposed model achieves superior predictive performance (RMSE = 33.9°C, MAE = 14°C, R² = 0.94). SHAP-based interpretability analysis reveals that the model identifies C, Ni, and Ceq as key contributors, forming a dominant Ni–Ceq–C interaction network modulated by structural descriptors. Sensitivity analyses confirm these trends and support the model’s physical consistency.
+                        To experimentally validate the model, dilatometry tests on two newly designed steels confirmed that the predicted Mₛ values (231°C and 165°C) closely matched the experimental results (238°C and 169°C), with deviations of only 7°C and 4°C, respectively. This work establishes a novel, physically grounded, and interpretable machine learning framework for Mₛ prediction, highlighting the value of integrating physics-based knowledge with advanced deep learning to accelerate alloy design and mechanical property optimisation.
+
+
+
+                    <p style="font-style: italic; font-size: 18px; color: #6E44FF; margin-top: 15px; text-align: center;">
+                        Published in <em>Journal of Nuclear Materials</em>, Vol. 615 (2025), Article 155984. </p>
+
+                </div>
+
+
+
+                 <div class="ms-predictor" style="margin-top: 40px; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9;">
+
+                <h2 style="text-align: center; color: #6E44FF; font-family: 'Georgia', serif; font-weight: 500; letter-spacing: 0.5px; font-style: italic;">Martensite Start Temperature \(M_s\) Predictor</h2>
+
+
+  
+
+
+                 <div class="math-container" style="text-align: center; font-size: 18px; margin-top: 20px;">
+    
+                 <!-- Label with purple color -->
+                 <p style="color: #1d1e22; font-family: 'Georgia', serif; font-weight: 500; letter-spacing: 0.5px; font-style: italic;"><strong>Empirical Equation:</strong></p>
+
+    
+    
+                 <!-- Equation with dark blue color -->
+                 <p style="color: #007bff;">
+                 $$
+                \begin{aligned}
+                 M_s =\ & 419.5 - 195.5C - 0.27Cr - Co - 29.66C \cdot Mn - 13.4C \cdot Ni - 2.99Mn \cdot Cr \\
+                 & - 1.29Si^2 - 1.5Cr \cdot Ni - 0.5Ni^2 + 7.25Mo \cdot Cu + 3.3Mo \cdot Nb \\
+                 & + 53.5V \cdot Cu + 2592.5Al \cdot Cu + 90W \cdot Nb + 11.2W \cdot Ti + 118.7Nb \cdot Ti
+                 \end{aligned}
+                 $$
+                </p>
+            </div>
+
+
+
+
+            <form id="msForm" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin-top: 20px;">
+  <label>\( C \): <input type="number" step="any" name="C"></label>
+  <label>\( Cr \): <input type="number" step="any" name="Cr"></label>
+  <label>\( Co \): <input type="number" step="any" name="Co"></label>
+  <label>\( Mn \): <input type="number" step="any" name="Mn"></label>
+  <label>\( Ni \): <input type="number" step="any" name="Ni"></label>
+  <label>\( Si \): <input type="number" step="any" name="Si"></label>
+  <label>\( Mo \): <input type="number" step="any" name="Mo"></label>
+  <label>\( Cu \): <input type="number" step="any" name="Cu"></label>
+  <label>\( Nb \): <input type="number" step="any" name="Nb"></label>
+  <label>\( V \): <input type="number" step="any" name="V"></label>
+  <label>\( Al \): <input type="number" step="any" name="Al"></label>
+  <label>\( W \): <input type="number" step="any" name="W"></label>
+  <label>\( Ti \): <input type="number" step="any" name="Ti"></label>
+</form>
+
+
+
+
+    <button onclick="calculateMs()" style="margin-top: 20px; padding: 10px 20px; font-size: 16px; background-color: #6E44FF; color: white; border: none; border-radius: 5px; cursor: pointer; font-family: 'Georgia', serif;font-weight: 500; letter-spacing: 0.5px; font-style: italic;">
+        Predict \(M_s\)
+    </button>
+
+    <p id="result" style="margin-top: 20px; font-size: 18px; font-weight: bold; color: #333;"></p>
+</div>
+
+
+
+<script>
+function calculateMs() {
+  const form = document.forms["msForm"];
+  const C = parseFloat(form["C"].value) || 0;
+  const Cr = parseFloat(form["Cr"].value) || 0;
+  const Co = parseFloat(form["Co"].value) || 0;
+  const Mn = parseFloat(form["Mn"].value) || 0;
+  const Ni = parseFloat(form["Ni"].value) || 0;
+  const Si = parseFloat(form["Si"].value) || 0;
+  const Mo = parseFloat(form["Mo"].value) || 0;
+  const Cu = parseFloat(form["Cu"].value) || 0;
+  const Nb = parseFloat(form["Nb"].value) || 0;
+  const V = parseFloat(form["V"].value) || 0;
+  const Al = parseFloat(form["Al"].value) || 0;
+  const W = parseFloat(form["W"].value) || 0;
+  const Ti = parseFloat(form["Ti"].value) || 0;
+
+  const Ms = 419.5 - 195.5*C - 0.27*Cr - Co - 29.66*C*Mn - 13.4*C*Ni - 2.99*Mn*Cr - 1.29*Math.pow(Si,2)
+             - 1.5*Cr*Ni - 0.5*Math.pow(Ni,2) + 7.25*Mo*Cu + 3.3*Mo*Nb + 53.5*V*Cu + 2592.5*Al*Cu
+             + 90*W*Nb + 11.2*W*Ti + 118.7*Nb*Ti;
+
+  document.getElementById("result").innerHTML = `<span style="font-family: 'Georgia', serif; font-weight: 500;
+    font-style: italic; letter-spacing: 0.5px; color: #333;">Predicted \\(M_s\\) Temperature: \\(${Ms.toFixed(2)}\\ ^{\\circ}\\text{C}\\)</span>`; MathJax.typeset();
+
+}
+</script>
+
+
+
+
+        <div class="links">
+            <ul>
+                <li><a href="papers/Radiation-induced_DBTT_hifts.pdf" target="_blank">Download paper</a></li>
+                <li><a href="https://www.sciencedirect.com/science/article/pii/S0022311525003782" target="_blank">Access paper from journal</a></li>
+                <li><a href="papers/Supplementary_Material_Radiation-induced_DBTT_hifts.docx">Download supplementary data</a></li>
+                <!-- <li><a href="#">Download graphics</a></li> -->
+                <li><a href="papers/Data and code Radiation-induced DBTT hifts.zip">Download data and code resources</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+        
+

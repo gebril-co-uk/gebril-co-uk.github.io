@@ -3,8 +3,8 @@
     <meta charset="UTF-8">
     <title>Ph.D. Thesis Preparation Guidelines | Alloy Design & Phase Transformations Research Group</title>
     <link rel="icon" type="image/png" href="https://gebril.co.uk/files/Favicon.png"/>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+     
     <meta name="description" content="Guidelines for preparing a Ph.D. thesis in the Alloy Design & Phase Transformations Research Group.">
     <link rel="stylesheet" href="styles/shared.css">
     <link rel="stylesheet" href="styles/index.css">
@@ -15,14 +15,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap">
     
 
+
+
     <style>
-
-
-
-
-
-
-
 
     
         .container {
@@ -288,6 +283,10 @@
         style="padding: 12px 16px; font-size: 16px; background-color: #4CAF50;  border: none; border-radius: 4px; cursor: pointer;">
     Download as PDF
 </button>
+
+
+
+
 
 
 
@@ -679,18 +678,63 @@
     });
 
 
-    document.getElementById("downloadPDF").addEventListener("click", () => {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-    const content = document.querySelector(".page").innerText;
 
-    doc.setFont("Helvetica");
-    doc.setFontSize(12);
-    doc.text(content, 10, 10, { maxWidth: 180 });
-    doc.save("PhD_Thesis_Guidelines.pdf");
+   console.log("📦 PDF about to be generated");
+
+
+
+document.getElementById("downloadPDF").addEventListener("click", () => {
+    // Simulate clicking all collapsible buttons to expand them (exactly as a user would do)
+    document.querySelectorAll(".collapsible").forEach(button => {
+        if (!button.classList.contains("active")) {
+            button.click(); // this triggers your native expand logic and class toggle
+        }
+    });
+
+    // Wait for the DOM and layout to finish updating
+    setTimeout(() => {
+        const element = document.querySelector(".page");
+        if (!element) {
+            console.error("No .page element found for export.");
+            return;
+        }
+
+        const opt = {
+            margin:       0.5,
+            filename:     'PhD_Thesis_Guidelines.pdf',
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { scale: 2 },
+            jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };
+
+        html2pdf().set(opt).from(element).save()
+          .then(() => console.log("✅ PDF downloaded"))
+          .catch(err => console.error("❌ PDF error:", err));
+    }, 500); // give enough time for animations/DOM expansion
 });
 
+
+
+
+
+
+
+
+
+
+
 </script>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

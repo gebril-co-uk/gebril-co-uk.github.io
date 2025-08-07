@@ -681,8 +681,6 @@
 
    console.log("📦 PDF about to be generated");
 
-
-
 document.getElementById("downloadPDF").addEventListener("click", () => {
     // Simulate clicking all collapsible buttons to expand them (exactly as a user would do)
     document.querySelectorAll(".collapsible").forEach(button => {
@@ -710,7 +708,7 @@ document.getElementById("downloadPDF").addEventListener("click", () => {
         html2pdf().set(opt).from(element).save()
           .then(() => console.log("✅ PDF downloaded"))
           .catch(err => console.error("❌ PDF error:", err));
-    }, 500); // give enough time for animations/DOM expansion
+    }, 100); // give enough time for animations/DOM expansion
 });
 
 

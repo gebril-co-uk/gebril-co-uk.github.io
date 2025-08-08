@@ -1,0 +1,314 @@
+<head>
+
+    <meta charset="UTF-8">
+    <title>Ph.D. Thesis Timetable | Alloy Design & Phase Transformations Research Group</title>
+    <link rel="icon" type="image/png" href="https://gebril.co.uk/files/Favicon.png"/>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+     
+    <meta name="description" content="EPSRC-based timetable for preparing a Ph.D. thesis in the Alloy Design & Phase Transformations Research Group.">
+    <link rel="stylesheet" href="styles/shared.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap">
+    
+
+
+<style>
+
+    table.timetable {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    table.timetable th, table.timetable td {
+        border: 1px solid #ccc;
+        padding: 10px 12px;
+        
+    }
+    table.timetable th {
+        background-color: #004080;
+        color: white;
+        font-weight: 600;
+        text-align: center; /* center only headers */
+        text-decoration: none; /* removes underline */
+
+
+    }
+    table.timetable td {
+        text-align: left; /* keep table body left-aligned */
+    }
+
+
+    table.timetable tr:nth-child(even) {
+        background-color: #f2f6fa;
+    }
+
+
+    .source-note {
+        font-size: 0.9em;
+        color: #666;
+        margin-top: 10px;
+    }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            flex-basis: calc(50% - 8px); /* 50% width with some margin */ I can change these for example 40px, higher for more margin
+            margin: 10px; /* Add margin for spacing */
+            margin-bottom: 40px; /* Add space below each item */  /* Or */ /* padding-bottom: 20px; /* Add space inside each item */
+            /* position: relative; /* Add position:relative to the item container */
+            grid-row-start: 1;
+            grid-row-end: 3;
+            text-align: justify;   /* This makes lines end at the same point */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border-radius: 3px;
+
+        }
+
+        .item img {
+            max-width: 100%;
+            height: auto;
+            /*display: block; /* Ensure the images and videos don't have extra spacing */
+
+        }
+
+       
+        .grid-container {
+           display: grid;
+           grid-template-columns: 10fr;
+           gap: 5px;
+        }
+
+
+        .topic_content {
+            margin: 10px;
+        }
+
+        .active, .collapsible:hover {
+            background-color: #ccc;
+            font-weight: 600; /* Optional: make it slightly bolder */
+
+        }
+
+         
+
+
+
+        .content {
+            padding: 0px 12px; /* Top/Bottom = 12px, Left/Right = 20px */
+            display: none;
+            overflow: hidden;
+            border: 1px solid rgb(210,210,210);
+            border-radius: 4px;
+            margin-bottom: 5px;
+            text-align: justify;           
+            text-overflow: ellipsis;
+            background-color:rgb(245,245,245);
+            font-size: 18px;
+            
+
+
+        }
+
+        .content ul {
+            padding-left: 40px;
+
+        }
+
+        .content li {
+            margin-bottom: 20px;
+            text-align: justify;
+            line-height: 1.2;
+            transition: color 0.2s ease, font-weight 0.2s ease
+
+        }
+
+        .content p {
+            text-align: justify;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+
+
+
+        .content p:hover,
+        .content li:hover {
+             color: #000; /* Darker text */
+             font-weight: 500; /* Optional: make it slightly bolder */
+        }
+
+        
+        .mark {
+            background-color: yellow;
+            color: black;
+            font-weight: bold;
+        }
+
+
+
+        .links {
+    margin-top: 20px;
+}
+
+.links ul li a:link, 
+.links ul li a:active {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.links ul li a:hover {
+    text-decoration: underline;
+}
+
+.links ul li a:visited, 
+.links ul li a:active {
+    color: darkred !important;
+}
+
+
+</style>
+</head>
+
+
+
+
+<body>
+    <div class="nav" id="navbar">
+        <div class="innernav">
+            <div class="navtext">   
+
+                <div class="logo">
+                    <li style="float: left;"><a href="index">Alloy Design & Phase Transformations Research Group</a></li>
+                </div>    
+
+        
+
+
+                <div class="navlinks">
+                    <li style="float: right;"><a href="photographs">Photographs</a></li>
+                    <li style="float: right;"><a href="equipment">Equipment</a></li>
+                    <li style="float: right;"><a href="teaching">Teaching</a></li>
+                    <li style="float: right;"><a href="research">Research</a></li>
+                    <li style="float: right;"><a href="group">Group</a></li>
+                    <li style="float: right;"><a href="index">About</a></li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="page"> 
+        <h3>Ph.D. Thesis Timetable</h3>
+            <div class="grid-container">
+                <div class="item">
+                    <a>
+                        <div class="topic_content">
+                            This timetable follows the guidance recommended by the UK’s Engineering and Physical Sciences Research Council (EPSRC) and has been tailored for the Alloy Design & Phase Transformations Research Group. It outlines a structured six-month writing-up schedule starting in April of Year 3, assuming the project began in October, ensuring steady progress and timely submission by the end of the funded period. The plan assumes research work is substantially complete, allowing full focus on drafting, revising, and finalising the thesis. Additionally, it anticipates that interpretations are well developed, and no major challenges will arise in synthesising an overall narrative. While unexpected hurdles, such as the need for further experiments or data analysis, may occur, their impact can be minimised by publishing key findings during the research phase. 
+
+                       </div>
+                    </a>
+                </div> 
+            </div>
+               
+
+    <table class="timetable">
+        <thead>
+            <tr>
+                <th>Stage</th>
+                <th>Duration</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Introduction</td>
+                <td>3 weeks</td>
+                <td>Write a clear, concise introduction framing the research problem, objectives, and context.</td>
+            </tr>
+            <tr>
+                <td>Methods & Results</td>
+                <td>6 weeks</td>
+                <td>Document experimental/theoretical methods, data, and key findings with supporting figures.</td>
+            </tr>
+            <tr>
+                <td>Discussion & Supporting Material</td>
+                <td>6 weeks</td>
+                <td>Analyse results in depth, prepare tables, figures, and references; integrate with existing literature.</td>
+            </tr>
+            <tr>
+                <td>Typing</td>
+                <td>2 weeks</td>
+                <td>Typeset the complete thesis (LaTeX/Word); finalise figure placement and captions; ensure consistent referencing, cross-references and numbering; generate lists of figures/tables; compile and check the PDF for layout, hyperlinks and page breaks.</td>
+            </tr>
+
+            <tr>
+                <td>Supervisor Consultation</td>
+                <td>1 week</td>
+                <td>Discuss draft with supervisors, obtain feedback, and identify key revisions.</td>
+            </tr>
+            <tr>
+                <td>Revision</td>
+                <td>2 weeks</td>
+                <td>Address supervisor comments, refine arguments, improve clarity and consistency.</td>
+            </tr>
+            <tr>
+                <td>Final Preparation</td>
+                <td>3 weeks</td>
+                <td>Finalise typing, figure formatting, proofreading, and compliance with submission guidelines.</td>
+            </tr>
+            <tr>
+                <td>Binding & Submission</td>
+                <td>1 week</td>
+                <td>Print, bind, and submit thesis; upload digital copy if required.</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+  <tr>
+    <td colspan="3" style="text-align:center;font-weight:600;">Total: 24 weeks</td>
+  </tr>
+</tfoot>
+
+    </table>
+
+
+
+
+    <p class="source-note">
+        Source: Adapted from EPSRC guidance and the University of Cambridge Phase Transformations Group timetable.
+    </p>
+
+
+
+ 
+<div class="links" style="display: flex; justify-content: space-between; margin-top: 30px;">
+    <ul style="list-style: none; padding: 0; margin: 0;">
+        <li>
+            <a href="phd_thesis_preparation.html">Examples of successful theses</a>
+        </li>
+    </ul>
+
+    <ul style="list-style: none; padding: 0; margin: 0;">
+        <li>
+            <a href="successful_theses.html">Examples of successful theses</a>
+        </li>
+    </ul>
+</div>
+
+
+
+
+</body>
+

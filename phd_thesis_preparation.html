@@ -712,7 +712,7 @@ document.getElementById("downloadPDF").addEventListener("click", () => {
         html2pdf().set(opt).from(element).save()
           .then(() => console.log("✅ PDF downloaded"))
           .catch(err => console.error("❌ PDF error:", err));
-    }, 50); // give enough time for animations/DOM expansion
+    }, 500); // give enough time for animations/DOM expansion
 });
 
 

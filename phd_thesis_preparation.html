@@ -197,6 +197,21 @@
         background-color: #006400; /* dark green */
         color: white;
     }
+
+
+
+    @media print {
+  .page-break {
+    page-break-before: always;
+    break-before: always;
+  }
+
+  .avoid-break {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
+
 </style>
 
 
@@ -622,6 +637,7 @@ window.MathJax = {
     document.querySelectorAll(".collapsible, .content").forEach(el => {
         el.setAttribute("data-original", el.innerHTML);
         el.setAttribute("data-latex", el.innerHTML); // Store the LaTeX version as well
+        el.classList.add('avoid-break');
 
     });
 

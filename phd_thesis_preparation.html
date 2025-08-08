@@ -298,10 +298,10 @@
     </p>
     <ul>
         
-        <li><strong>Use LaTeX with plotting tools:</strong> LaTeX is highly recommended for theses in the Alloy Design & Phase Transformations Research Group, especially where mathematical notation, complex referencing, and figure integration are involved. It ensures consistent formatting and professional presentation. For example, equations like <span class="mathjax-only">\( \Delta G = \Delta H - T\Delta S \)</span> <span class="pdf-safe" style="display: none;">ΔG = ΔH − TΔS</span> are rendered cleanly, and cross-referencing figures and tables is automated. Additionally, plotting tools such as Gnuplot, Matplotlib, or Origin can export figures with LaTeX-rendered labels and equations, ensuring visual consistency. Axis labels like <em>\( C_{\text{eq}} \)</em> or <em>\( T_{\gamma \rightarrow \alpha} \)</em> can be embedded directly into plots, matching the style of your written equations.</li>
+        <li><strong>Use LaTeX with plotting tools:</strong> LaTeX is highly recommended for theses in the Alloy Design & Phase Transformations Research Group, especially where mathematical notation, complex referencing, and figure integration are involved. It ensures consistent formatting and professional presentation. For example, equations like <span class="mathjax-only">\( \Delta G = \Delta H - T\Delta S \)</span> <span class="pdf-safe" style="display: none;">ΔG = ΔH − TΔS</span> are rendered cleanly, and cross-referencing figures and tables is automated. Additionally, plotting tools such as Gnuplot, Matplotlib, or Origin can export figures with LaTeX-rendered labels and equations, ensuring visual consistency. Axis labels like <span class="mathjax-only">\( C_{\text{eq}} \)</span> <span class="pdf-safe" style="display: none;">Ceq</span> or <span class="mathjax-only">\( T_{\gamma \rightarrow \alpha} \)</span> <span class="pdf-safe" style="display: none;">T<sub>γ→α</sub></span> can be embedded directly into plots, matching the style of your written equations.</li>
 
 
-        <li><strong>Submit complete drafts:</strong> Supervisors will review only two drafts—individual chapters and the complete thesis. Submit chapters only when the full thesis draft is ready.</li>
+        <li><strong>Submit complete drafts:</strong> Supervisors will review only two drafts, individual chapters and the complete thesis. Submit chapters only when the full thesis draft is ready.</li>
 
         <li><strong>Proofread before submission:</strong> Eliminate superficial errors before supervisor review to allow focus on scientific content.</li>
 
@@ -383,7 +383,8 @@
         <li><strong>Spelling errors:</strong> These are unacceptable in formal writing. Use spellcheck consistently. For example, “martensite” should not appear as “martinsite”. Use either British English or American English consistently throughout the thesis, do not mix styles (e.g., “colour” vs. “color”, characterisation vs. “characterization”, “aluminium” vs. “aluminum”).</li>
 
 
-        <li><strong>Inconsistent notation:</strong> If you use “<em>\( M_{\text{s}} \)</em>” for martensite start temperature, do not switch to “M_s” or “Ms temp” later. Use a nomenclature list to standardise terminology.</li>
+        <li><strong>Inconsistent notation:</strong> If you use “<span class="mathjax-only">\( M_{\text{s}} \)</span> 
+        <span class="pdf-safe" style="display: none;">Ms</span>” for martensite start temperature, do not switch to “M_s” or “Ms temp” later. Use a nomenclature list to standardise terminology.</li>
 
         <li><strong>Incorrect spacing after punctuation:</strong> There should be a space after a full stop or comma, but not after an opening bracket or before a closing one. Example: “(Fig. 3.5)” not “( Fig. 3.5 )”.</li>
 
@@ -392,7 +393,7 @@
         <li><strong>Inadequate referencing:</strong> Always include article titles and consistent formatting. For example: “J. Mater. Sci., 2025, 56, 1125–1155” is better than “JMS 2025”. Avoid mixing citation styles.</li>
 
 
-        <li><strong>Incorrect units and notation:</strong> Use SI units and proper spacing: write “60&thinsp;MPa” not “60MPa”; “Fe–9Ni wt.%” instead of “Fe–9Ni %”. Avoid ambiguous expressions like “Fe–9Ni %” which do not specify weight or atomic percent. Use exponents for derived units: “120&thinsp;kJ&thinsp;mol\(^{-1}\)”  not “120kJ/mol”. Units should be in roman font, and mathematical variables in italics.</li>   
+        <li><strong>Incorrect units and notation:</strong> Use SI units and proper spacing: write “60&thinsp;MPa” not “60MPa”; “Fe–9Ni wt.%” instead of “Fe–9Ni %”. Avoid ambiguous expressions like “Fe–9Ni %” which do not specify weight or atomic percent. Use exponents for derived units: “120&thinsp;kJ&thinsp;mol<span class="mathjax-only">\(^{-1}\)</span> <span class="pdf-safe" style="display: none;">⁻¹</span>”  not “120kJ/mol”. Units should be in roman font, and mathematical variables in italics.</li>  
 
 
         <li><strong>Volume fraction vs. volume percent:</strong> Writing “70%” to describe a volume fraction is incorrect. Use “70 vol%” or “volume fraction of 0.70”.</li>
@@ -429,7 +430,7 @@
 
         <li><strong>Unclear figure legends:</strong> Legends must explain all symbols and lines. Avoid using keys that require the reader to cross-reference. Instead, label curves directly in the figure.</li>
 
-        <li><strong>Missing micrometre markers:</strong> Micrographs must include scale bars. Do not place markers on the page near the image—embed them within the image itself.</li>
+        <li><strong>Missing micrometre markers:</strong> Micrographs must include scale bars. Do not place markers on the page near the image, embed them within the image itself.</li>
     </ul>
 </div>
 
@@ -470,7 +471,7 @@
             <ul>
                 <li>Avoid using keys that require cross-referencing; label curves directly.</li>
                 <li>Use minor ticks only when necessary (e.g., logarithmic scales).</li>
-                <li>Use proper scientific notation: prefer \(10^{-3}\) over "1E-3".</li>
+                <li>Use proper scientific notation: prefer <span class="mathjax-only">\(10^{-3}\)</span> <span class="pdf-safe" style="display: none;">10⁻³</span> over "1E-3".</li>
             </ul>
         </li>
         <li><strong>Captions Matter:</strong> Ensure figure captions clearly explain all visual elements, including line styles and symbols.</li>
@@ -499,9 +500,8 @@
 
     
     Table 1.1: Mechanical properties of Alloy A and B at different test temperatures. 
-    \(\sigma_{\rm PS}\) and \(\sigma_{\rm UTS}\) are the proof and ultimate tensile strengths respectively, 
-    \(\varepsilon_{\rm U}\) and \(\varepsilon_{\rm T}\) are the uniform and total elongations respectively, and 
-    \(\varepsilon_{\rm A}\) is the reduction of area.
+    <span class="mathjax-only">\( \sigma_{\rm PS} \)</span> <span class="pdf-safe" style="display: none;">σ<sub>PS</sub></span> and <span class="mathjax-only">\( \sigma_{\rm UTS} \)</span> <span class="pdf-safe" style="display: none;">σ<sub>UTS</sub></span> are the proof and ultimate tensile strengths respectively, 
+    <span class="mathjax-only">\( \varepsilon_{\rm U} \)</span> <span class="pdf-safe" style="display: none;">ε<sub>U</sub></span> and <span class="mathjax-only">\( \varepsilon_{\rm T} \)</span> <span class="pdf-safe" style="display: none;">ε<sub>T</sub></span> are the uniform and total elongations respectively, and  <span class="mathjax-only">\( \varepsilon_{\rm A} \)</span> <span class="pdf-safe" style="display: none;">ε<sub>A</sub></span> is the reduction of area.
 </p>
 
 </div>

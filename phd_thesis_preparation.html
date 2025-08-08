@@ -625,10 +625,17 @@
 
     // Highlight matches
     function highlightText(element, query) {
-        const regex = new RegExp(`(${query})`, 'gi');
-        const original = element.getAttribute("data-original");
-        element.innerHTML = original.replace(regex, `<mark>$1</mark>`);
+    const regex = new RegExp(`(${query})`, 'gi');
+    const original = element.getAttribute("data-original");
+    element.innerHTML = original.replace(regex, `<mark>$1</mark>`);
+
+    // Rerender MathJax equations after rewriting HTML
+    if (window.MathJax && MathJax.typeset) {
+        MathJax.typeset();
+       }
     }
+
+
 
     function resetHighlights() {
         document.querySelectorAll("[data-original]").forEach(el => {
@@ -637,6 +644,10 @@
     }
 
     
+
+
+
+
 
     function filterContent(query) {
          collapsibles.forEach(btn => {
@@ -670,12 +681,21 @@
     clearButton.addEventListener("click", function () {
         searchInput.value = "";
         resetHighlights();
+        resetMathDisplay();
         collapsibles.forEach(btn => {
             btn.style.display = "block";
             const content = btn.nextElementSibling;
             content.style.display = btn.classList.contains("active") ? "block" : "none";
         });
     });
+
+
+function resetMathDisplay() {
+    // Show the MathJax expressions and hide the PDF-safe versions
+    document.querySelectorAll(".mathjax-only").forEach(el => el.style.display = "inline");
+    document.querySelectorAll(".pdf-safe").forEach(el => el.style.display = "none");
+}
+
 
 
 

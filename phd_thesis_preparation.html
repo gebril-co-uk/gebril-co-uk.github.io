@@ -298,7 +298,7 @@
     </p>
     <ul>
         
-        <li><strong>Use LaTeX with plotting tools:</strong> LaTeX is highly recommended for theses in the Alloy Design & Phase Transformations Research Group, especially where mathematical notation, complex referencing, and figure integration are involved. It ensures consistent formatting and professional presentation. For example, equations like <em>\( \Delta G = \Delta H - T\Delta S \)</em> are rendered cleanly, and cross-referencing figures and tables is automated. Additionally, plotting tools such as Gnuplot, Matplotlib, or Origin can export figures with LaTeX-rendered labels and equations, ensuring visual consistency. Axis labels like <em>\( C_{\text{eq}} \)</em> or <em>\( T_{\gamma \rightarrow \alpha} \)</em> can be embedded directly into plots, matching the style of your written equations.</li>
+        <li><strong>Use LaTeX with plotting tools:</strong> LaTeX is highly recommended for theses in the Alloy Design & Phase Transformations Research Group, especially where mathematical notation, complex referencing, and figure integration are involved. It ensures consistent formatting and professional presentation. For example, equations like <span class="mathjax-only">\( \Delta G = \Delta H - T\Delta S \)</span> <span class="pdf-safe" style="display: none;">ΔG = ΔH − TΔS</span> are rendered cleanly, and cross-referencing figures and tables is automated. Additionally, plotting tools such as Gnuplot, Matplotlib, or Origin can export figures with LaTeX-rendered labels and equations, ensuring visual consistency. Axis labels like <em>\( C_{\text{eq}} \)</em> or <em>\( T_{\gamma \rightarrow \alpha} \)</em> can be embedded directly into plots, matching the style of your written equations.</li>
 
 
         <li><strong>Submit complete drafts:</strong> Supervisors will review only two drafts—individual chapters and the complete thesis. Submit chapters only when the full thesis draft is ready.</li>
@@ -694,6 +694,7 @@ document.getElementById("downloadPDF").addEventListener("click", () => {
     document.querySelectorAll(".mathjax-only").forEach(el => el.style.display = "none");
     document.querySelectorAll(".pdf-safe").forEach(el => el.style.display = "inline");
 
+
     // Wait for the DOM and layout to finish updating
     setTimeout(() => {
         const element = document.querySelector(".page");
@@ -730,6 +731,9 @@ document.getElementById("downloadPDF").addEventListener("click", () => {
 
 
 
+    
+
+   
 
 
 

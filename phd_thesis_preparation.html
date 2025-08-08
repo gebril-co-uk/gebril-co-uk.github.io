@@ -680,20 +680,18 @@
 
 
 document.getElementById("downloadPDF").addEventListener("click", () => {
-    // Simulate clicking all collapsible buttons to expand them (exactly as a user would do)
+    // Expand all collapsible sections
     document.querySelectorAll(".collapsible").forEach(button => {
         if (!button.classList.contains("active")) {
-            button.click(); // this triggers your native expand logic and class toggle
+            button.click();
         }
     });
 
-
-// Swap math display for PDF-safe version
+    // Swap math display for PDF-safe version
     document.querySelectorAll(".mathjax-only").forEach(el => el.style.display = "none");
     document.querySelectorAll(".pdf-safe").forEach(el => el.style.display = "inline");
 
-
-    // Wait for the DOM and layout to finish updating
+    // Wait for DOM update
     setTimeout(() => {
         const element = document.querySelector(".page");
         if (!element) {
@@ -702,18 +700,36 @@ document.getElementById("downloadPDF").addEventListener("click", () => {
         }
 
         const opt = {
-            margin:       0.5,
-            filename:     'PhD_Thesis_Guidelines.pdf',
-            image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2 },
-            jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+            margin: 0.5,
+            filename: 'PhD_Thesis_Guidelines.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
         };
 
         html2pdf().set(opt).from(element).save()
-          .then(() => console.log("✅ PDF downloaded"))
+          .then(() => {
+              console.log("✅ PDF downloaded");
+
+              // Collapse back
+              document.querySelectorAll(".collapsible").forEach(button => {
+                  if (button.classList.contains("active")) {
+                      button.click();
+                  }
+              });
+
+              // Restore LaTeX view
+              document.querySelectorAll(".mathjax-only").forEach(el => el.style.display = "inline");
+              document.querySelectorAll(".pdf-safe").forEach(el => el.style.display = "none");
+
+              if (window.MathJax && MathJax.typeset) {
+                  MathJax.typeset();
+              }
+          })
           .catch(err => console.error("❌ PDF error:", err));
-    }, 500); // give enough time for animations/DOM expansion
+    }, 500);
 });
+
 
 
 

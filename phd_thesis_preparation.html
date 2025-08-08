@@ -217,6 +217,15 @@
 }
 
 
+
+.superscript-fix {
+  font-size: 80%;
+  vertical-align: super;
+}
+
+
+
+
 </style>
 
 
@@ -327,7 +336,7 @@ window.MathJax = {
     </p>
     <ul>
         
-        <li><strong>Use LaTeX with plotting tools:</strong> LaTeX is highly recommended for theses in the Alloy Design & Phase Transformations Research Group, especially where mathematical notation, complex referencing, and figure integration are involved. It ensures consistent formatting and professional presentation. For example, equations like <span class="mathjax-only">\( \Delta G = \Delta H - T\Delta S \)</span> <span class="pdf-safe" style="display: none;">ΔG = ΔH − TΔS</span> are rendered cleanly, and cross-referencing figures and tables is automated. Additionally, plotting tools such as Gnuplot, Matplotlib, or Origin can export figures with LaTeX-rendered labels and equations, ensuring visual consistency. Axis labels like <span class="mathjax-only">\( C_{\text{eq}} \)</span> <span class="pdf-safe" style="display: none;">Ceq</span> or <span class="mathjax-only">\( T_{\gamma \rightarrow \alpha} \)</span> <span class="pdf-safe" style="display: none;">T<sub>γ→α</sub></span> can be embedded directly into plots, matching the style of your written equations.</li>
+        <li><strong>Use LaTeX with plotting tools:</strong> LaTeX is highly recommended for theses in the Alloy Design & Phase Transformations Research Group, especially where mathematical notation, complex referencing, and figure integration are involved. It ensures consistent formatting and professional presentation. For example, equations like <span class="mathjax-only">\( \Delta G = \Delta H - T\Delta S \)</span> <span class="pdf-safe" style="display: none;">ΔG = ΔH − TΔS</span> are rendered cleanly, and cross-referencing figures and tables is automated. Additionally, plotting tools such as Gnuplot, Matplotlib, or Origin can export figures with LaTeX-rendered labels and equations, ensuring visual consistency. Axis labels like <span class="mathjax-only">\( C_{\text{eq}} \)</span> <span class="pdf-safe" style="display: none;">C<sub>eq</sub></span> or <span class="mathjax-only">\( T_{\gamma \rightarrow \alpha} \)</span> <span class="pdf-safe" style="display: none;">T<sub>γ→α</sub></span> can be embedded directly into plots, matching the style of your written equations.</li>
 
 
         <li><strong>Submit complete drafts:</strong> Supervisors will review only two drafts, individual chapters and the complete thesis. Submit chapters only when the full thesis draft is ready.</li>
@@ -420,12 +429,12 @@ window.MathJax = {
         <li><strong>Improper abbreviation formatting:</strong> Accredited abbreviations like “Ph.D.” or “C.V.” do not require spaces after full stops. Initials in names must be spaced: “G. M. El-Farouki”, not “G.M.El-Farouki”.</li>
 
         <li><strong>Inadequate referencing:</strong> Always include article titles and consistent formatting. For example: “J. Mater. Sci., 2025, 56, 1125–1155” is better than “JMS 2025”. Avoid mixing citation styles.</li>
+ 
+
+        <li> <strong>Incorrect units and notation:</strong> Use SI units and proper spacing: write “60&thinsp;MPa” not “60MPa”; “Fe–9Ni wt.%” instead of “Fe–9Ni %”. Avoid ambiguous expressions like “Fe–9Ni %” which do not specify weight or atomic percent. Use exponents for derived units: “120&thinsp;kJ&thinsp;<span class="mathjax-only">mol\(^{-1}\)</span> <span class="pdf-safe" style="display: none;">mol<span class="superscript-fix">−1</span></span>” not “120kJ/mol”. Units should be in roman font, and mathematical variables in italics.</li>
 
 
-        <li><strong>Incorrect units and notation:</strong> Use SI units and proper spacing: write “60&thinsp;MPa” not “60MPa”; “Fe–9Ni wt.%” instead of “Fe–9Ni %”. Avoid ambiguous expressions like “Fe–9Ni %” which do not specify weight or atomic percent. Use exponents for derived units: “120&thinsp;kJ&thinsp;mol<span class="mathjax-only">\(^{-1}\)</span> <span class="pdf-safe" style="display: none;">⁻¹</span>”  not “120kJ/mol”. Units should be in roman font, and mathematical variables in italics.</li>  
-
-
-        <li><strong>Volume fraction vs. volume percent:</strong> Writing “70%” to describe a volume fraction is incorrect. Use “70 vol%” or “volume fraction of 0.70”.</li>
+        <li><strong>Volume fraction vs. volume percent:</strong> Writing “70%” to describe a volume fraction is incorrect. Use “70&thinsp;vol.%” or “volume fraction of 0.70”.</li>
 
         <li><strong>Mathematical notation errors:</strong> Variables should be in italics (e.g., <em>σ</em>, <em>ε</em>), while functions like log, sin, and exp remain in roman font. Subscripts and superscripts should be in roman unless they represent variables.</li>
 
@@ -500,7 +509,19 @@ window.MathJax = {
             <ul>
                 <li>Avoid using keys that require cross-referencing; label curves directly.</li>
                 <li>Use minor ticks only when necessary (e.g., logarithmic scales).</li>
-                <li>Use proper scientific notation: prefer <span class="mathjax-only">\(10^{-3}\)</span> <span class="pdf-safe" style="display: none;">10⁻³</span> over "1E-3".</li>
+                <li>Use proper scientific notation: prefer <span class="mathjax-only">\(10^{-3}\)</span> <span class="pdf-safe" style="display: none;">10<span class="superscript-fix">−3</span></span> over "1E-3".  </li>
+
+
+
+
+
+
+
+
+
+
+
+
             </ul>
         </li>
         <li><strong>Captions Matter:</strong> Ensure figure captions clearly explain all visual elements, including line styles and symbols.</li>

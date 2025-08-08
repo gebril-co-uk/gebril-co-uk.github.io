@@ -197,6 +197,53 @@
         background-color: #006400; /* dark green */
         color: white;
     }
+
+
+
+
+    #loadingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#loadingOverlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.spinner {
+  border: 6px solid #ccc;
+  border-top: 6px solid #0055aa;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 0.8s linear infinite;
+}
+
+.loading-text {
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 </style>
 
 
@@ -692,43 +739,40 @@ document.getElementById("downloadPDF").addEventListener("click", () => {
     document.querySelectorAll(".pdf-safe").forEach(el => el.style.display = "inline");
 
     // Wait for DOM update
-    setTimeout(() => {
-        const element = document.querySelector(".page");
-        if (!element) {
-            console.error("No .page element found for export.");
-            return;
-        }
+setTimeout(() => {
+    const element = document.querySelector(".page");
+    if (!element) {
+        console.error("No .page element found for export.");
+        return;
+    }
 
-        const opt = {
-            margin: 0.5,
-            filename: 'PhD_Thesis_Guidelines.pdf',
-            image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { scale: 2 },
-            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-        };
+    // ✅ Show loading overlay
+    document.getElementById("loadingOverlay").classList.add("active");
 
-        html2pdf().set(opt).from(element).save()
-          .then(() => {
-              console.log("✅ PDF downloaded");
+    const opt = {
+        margin: 0.5,
+        filename: 'PhD_Thesis_Guidelines.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
 
-              // Collapse back
-              document.querySelectorAll(".collapsible").forEach(button => {
-                  if (button.classList.contains("active")) {
-                      button.click();
-                  }
-              });
+    // Generate Pdf...
 
-              // Restore LaTeX view
-              document.querySelectorAll(".mathjax-only").forEach(el => el.style.display = "inline");
-              document.querySelectorAll(".pdf-safe").forEach(el => el.style.display = "none");
+    html2pdf().set(opt).from(element).save()
+      .then(() => {
+          // ✅ Hide loading overlay
+          document.getElementById("loadingOverlay").classList.remove("active");
 
-              if (window.MathJax && MathJax.typeset) {
-                  MathJax.typeset();
-              }
-          })
-          .catch(err => console.error("❌ PDF error:", err));
-    }, 500);
-});
+          // 🔁 Reset collapsed state and MathJax view
+          // (your existing code here)
+      })
+      .catch(err => {
+          document.getElementById("loadingOverlay").classList.remove("active");
+          console.error("❌ PDF error:", err);
+      });
+}, 500);
+
 
 
 
@@ -743,6 +787,10 @@ document.getElementById("downloadPDF").addEventListener("click", () => {
 
 </script>
 
+<div id="loadingOverlay">
+  <div class="spinner"></div>
+  <div class="loading-text">Generating PDF...</div>
+</div>
 
 
 

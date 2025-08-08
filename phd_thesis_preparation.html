@@ -201,16 +201,21 @@
 
 
     @media print {
-  .page-break {
-    page-break-before: always;
-    break-before: always;
-  }
-
   .avoid-break {
-    page-break-inside: avoid;
-    break-inside: avoid;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+  .html2pdf-pagebreak {
+    page-break-before: always !important;
+    break-before: always !important;
   }
 }
+
+
+.pdf-section {
+  margin-bottom: 1.5em;
+}
+
 
 </style>
 
@@ -762,6 +767,9 @@ document.getElementById("downloadPDF").addEventListener("click", () => {
             image: { type: 'jpeg', quality: 0.98 },
             html2canvas: { scale: 2 },
             jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            pagebreak: {
+              mode: ['avoid-all', 'css', 'legacy']
+             }
         };
 
         html2pdf().set(opt).from(element).save()

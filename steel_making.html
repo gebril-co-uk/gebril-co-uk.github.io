@@ -1,0 +1,310 @@
+<head>
+    <title>
+        Alloy Design & Phase Transformations Research Group
+    </title>
+    <link rel="icon" type="image/png" href="https://gebril.co.uk/files/Favicon.png"/>
+    <meta name="description" content="Explore the steel alloy-making process with the Alloy Design & Phase Transformations Research Group—linking raw materials, metallurgy, and advanced research in alloy innovation.">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/shared.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap">
+
+
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            
+            
+        }
+
+        .item {
+            flex-basis: calc(50% - 8px); /* 50% width with some margin */ I can change these for example 40px, higher for more margin
+            margin: 10px; /* Add margin for spacing */
+            margin-bottom: 40px; /* Add space below each item */  /* Or */ /* padding-bottom: 20px; /* Add space inside each item */
+            /* position: relative; /* Add position:relative to the item container */
+            grid-row-start: 1;
+            grid-row-end: 3;
+            text-align: justify;   /* This makes lines end at the same point */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border-radius: 3px;
+
+        }
+
+        .item img {
+            max-width: 100%;
+            height: auto;
+            /*display: block; /* Ensure the images and videos don't have extra spacing */
+
+        }
+
+
+    .steps {
+      margin: 30px 0; /* space before and after the step buttons */
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .steps button {
+      background: #004080;
+      color: #fff;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .steps button:hover {
+      background: #0066cc;
+    }
+
+    #step-description {
+      margin-top: 40px; /* space between buttons and description */
+      padding: 20px;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      display: none; /* hidden by default */
+    }
+
+    #step-description img {
+      max-width: 350px;
+      display: block;
+      margin: 15px auto; /* centers the image horizontally */
+    }
+
+
+    #step-description ul {
+      margin: 15px 0;
+      padding-left: 25px;
+      list-style-type: disc;
+    }
+
+   #step-description li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+  </style>
+</head>
+
+
+
+
+        
+    
+
+
+<body>
+    <div class="nav" id="navbar">
+        <div class="innernav">
+            <div class="navtext">   
+
+                <div class="logo">
+                    <li style="float: left;"><a href="index">Alloy Design & Phase Transformations Research Group</a></li>
+                </div>    
+
+                
+
+
+                <div class="navlinks">
+                    <li style="float: right;"><a href="photographs">Photographs</a></li>
+                    <li style="float: right;"><a href="equipment">Equipment</a></li>
+                    <li style="float: right;"><a href="teaching">Teaching</a></li>
+                    <li style="float: right;"><a href="research">Research</a></li>
+                    <li style="float: right;"><a href="group">Group</a></li>
+                    <li style="float: right;"><a href="index">About</a></li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+
+    <div class="page"> 
+        <h3>Steel Alloy-Making Process</h3>
+            <div class="grid-container">
+                <div class="item">
+                    <a>
+                        <div class="topic_content">
+                             Discover how steel alloys are created, refined, and transformed from raw minerals into advanced engineering materials. This page takes you step by step through the steelmaking journey-covering raw material preparation, melting, refining, alloying, casting, and surface treatments. Each stage explains the process and its impact on structure, performance, and modern applications. Whether you are a student, researcher, or professional, you will gain clear insight into the science and engineering that shape high-performance steels.
+                      </div>
+                </div>
+          
+       
+                            
+                     
+
+
+
+
+
+  <div class="steps">
+    <button onclick="showStep(0)">1. Raw Material Preparation</button>
+    <button onclick="showStep(1)">2. Melting</button>
+    <button onclick="showStep(2)">3. Desulfurisation</button>
+    <button onclick="showStep(3)">4. Refining</button>
+    <button onclick="showStep(4)">5. Secondary Metallurgy</button>
+    <button onclick="showStep(5)">6. Alloying</button>
+    <button onclick="showStep(6)">7. Casting</button>
+    <button onclick="showStep(7)">8. Rolling</button>
+    <button onclick="showStep(8)">9. Heat Treatment</button>
+    <button onclick="showStep(9)">10. Surface Treatment</button>
+  </div>
+
+
+  
+
+
+ <div id="step-description">
+      <h3 id="step-title"></h3>
+      <img id="step-image" src="" alt="Stage Image">
+      <p id="step-text"></p>
+    </div>
+  </div>
+
+
+
+
+  <script>
+    const steps = [
+      {
+        title: "Raw Material Preparation",
+        text: `<p>The steelmaking process begins with the careful selection and preparation of essential raw materials:</p> <ul>
+                    <li><strong>Iron Ore:</strong> Typically hematite or magnetite, the ore is crushed and screened to achieve the desired particle size for efficient reduction in the blast furnace.</li>
+
+                    <li><strong>Coke:</strong> Produced from metallurgical coal through high-temperature carbonisation, coke acts both as a fuel and a reducing agent. Its strength and porosity are carefully controlled to ensure furnace stability and efficiency.</li>
+
+                    <li><strong>Limestone:</strong> A key fluxing agent, limestone is crushed and sized to remove impurities such as silica and alumina during smelting. It reacts to form slag, which captures and separates these unwanted elements.</li></ul>
+
+                    <p>These materials are weighed, blended, and stored in silos or bunkers before being charged into the blast furnace. The consistency of this stage is critical for achieving efficient melting, minimising energy consumption, and ensuring the chemical integrity of the final steel product.</p>
+
+                    <p><em>Looking forward:</em> Next-generation steelmaking increasingly explores <strong>hydrogen-based reduction</strong>, 
+
+                    <strong>biomass-derived carbon</strong>, and <strong>AI-optimised material blending</strong> to cut CO<sub>2</sub> emissions while maintaining high performance in advanced alloys.</p>`,
+        image: "raw_material_preparation4.png"
+      },
+
+
+
+      {
+        title: "Melting",
+        text: `<p>Once prepared, the raw materials are charged into a <strong>blast furnace</strong> (using coke as the primary fuel and reducing agent) or an <strong>electric arc furnace (EAF)</strong> (primarily using recycled steel scrap):</p><ul>
+
+
+
+              <li><strong>Blast Furnace:</strong> Iron ore, coke, and limestone are layered and exposed to air blasts at temperatures exceeding 2000°C. The coke combusts to generate carbon monoxide, which reduces iron ore into molten iron.</li>
+
+
+              <li><strong>Electric Arc Furnace (EAF):</strong> High-voltage electric arcs rapidly melt recycled steel scrap, offering flexibility in raw material use and reduced reliance on virgin iron ore.</li></ul>
+
+              <p>The result is <strong>molten iron</strong>, which serves as the base for subsequent refining into steel. 
+
+               Precise control of furnace conditions is essential for optimising energy efficiency, impurity removal, and the quality of the liquid metal.</p>
+
+
+               <p><em>Looking forward:</em> Future melting technologies are exploring <strong>hydrogen plasma smelting</strong> to eliminate fossil fuel dependency, <strong>direct electrolysis of iron ore</strong> (using renewable electricity), and <strong>AI-driven furnace monitoring</strong> to minimise energy consumption and achieve near-zero CO<sub>2</sub> emissions.</p>`,
+        image: "melting.png"
+      },
+
+
+
+      {
+        title: "Desulfurisation",
+        text: `<p><strong>Desulfurisation</strong> is an optional but often vital step for producing high-grade steels. 
+          Although sulfur occurs only in small amounts, even trace levels can make steel brittle and prone to cracking.</p>
+
+          <ul>
+            <li><strong>Process:</strong> Molten iron is treated with agents such as calcium carbide, magnesium, or lime, which react with sulfur to form solid compounds that float to the surface and are removed with the slag.</li>
+
+            <li><strong>Purpose:</strong> Reduces sulfur content to below 0.005 wt.%, ensuring improved ductility, toughness, and weldability, critical for applications like pipelines, automotive components, and aerospace structures.</li>
+          </ul>
+
+          <p>By carefully lowering sulfur, steelmakers unlock higher performance, reliability, and service life in demanding environments.</p>
+
+          <p><em>Looking forward:</em> Research is focusing on <strong>real-time sulfur sensors</strong>, 
+          <strong>slag engineering with nano-additives</strong> to enhance impurity capture, 
+          and <strong>machine-learning optimisation</strong> of desulfurisation efficiency, 
+          paving the way for ultra-clean steels for next-generation infrastructure and energy systems.</p>`,
+
+        image: "desulfurisation.png"
+      },
+
+
+      {
+        title: "Refining",
+        text: `<p>After melting, the molten iron must be refined to become steel with the desired chemical composition and properties.  This step removes excess carbon and other impurities such as phosphorus, silicon, and remaining sulfur.</p>
+
+           <ul>
+           <li><strong>Basic Oxygen Furnace (BOF):</strong> Oxygen is blown into molten iron, reacting with carbon and impurities to form CO, CO<sub>2</sub>, and slag. This lowers the carbon content to levels suitable for steel.</li>
+
+          <li><strong>Electric Arc Furnace (EAF) Refining:</strong> In EAFs, additional refining can include oxygen injection, flux addition, and temperature control to achieve precise chemical composition, especially for specialty steels.</li>
+
+          <li><strong>Purpose:</strong> Ensures uniform composition, removes harmful elements, and optimises the molten steel for subsequent alloying and casting processes.</li>
+          </ul>
+
+
+         <p>Refining is crucial for producing steels with excellent mechanical performance, weldability, and corrosion resistance.</p>
+
+         <p><em>Looking forward:</em> Modern research is exploring <strong>low-emission refining</strong> using oxygen-enriched or hydrogen-assisted processes, 
+         <strong>nano-additive slags</strong> for more efficient impurity capture, and <strong>AI-driven process control</strong> to achieve ultra-precise compositions with minimal energy use and near-zero CO<sub>2</sub> emissions.</p>`,
+
+        image: "refining.png"
+      },
+
+
+
+
+
+      {
+        title: "Secondary Metallurgy",
+        text: "Processes like vacuum degassing and ladle furnace adjustment refine steel composition.",
+        image: "secondary_metallurgy.png"
+      },
+      {
+        title: "Alloying",
+        text: "Elements such as chromium, nickel, and vanadium are added to enhance properties.",
+        image: "alloying.png"
+      },
+      {
+        title: "Casting",
+        text: "Molten steel is cast into slabs, blooms, or billets.",
+        image: "casting.png"
+      },
+      {
+        title: "Rolling",
+        text: "Steel is rolled to refine its structure and shape it for final use.",
+        image: "rolling.png"
+      },
+      {
+        title: "Heat Treatment",
+        text: "Annealing, quenching, and tempering adjust microstructure and properties.",
+        image: "heat_treatment.png"
+      },
+      {
+        title: "Surface Treatment",
+        text: "Processes like pickling, coating, and polishing enhance durability and appearance.",
+        image: "surface_treatment.png"
+      }
+    ];
+
+    function showStep(index) {
+      document.getElementById("step-title").innerText = steps[index].title;
+      document.getElementById("step-text").innerHTML = steps[index].text;
+      document.getElementById("step-image").src = steps[index].image;
+      document.getElementById("step-description").style.display = "block"; // show description when clicked
+    }
+  </script>
+</body>

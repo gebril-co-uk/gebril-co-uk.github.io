@@ -177,6 +177,179 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
+<section id="steel-process">
+  <h2>Steel Alloy-Making Process</h2>
+  <div class="steps">
+    <button onclick="showStep(0)">1. Raw Material Preparation</button>
+    <button onclick="showStep(1)">2. Melting</button>
+    <button onclick="showStep(2)">3. Refining</button>
+    <button onclick="showStep(3)">4. Alloying</button>
+    <button onclick="showStep(4)">5. Casting</button>
+    <button onclick="showStep(5)">6. Heat Treatment</button>
+  </div>
+  <div id="step-description">
+    <h3 id="step-title"></h3>
+    <img id="step-image" src="" alt="Stage Image" style="max-width:300px; display:block; margin:10px 0;">
+    <p id="step-text"></p>
+  </div>
+</section>
+
+<style>
+  #steel-process { margin: 40px 0; padding: 20px; background: #f9f9f9; border-radius: 8px; }
+  .steps button { margin: 5px; padding: 10px 15px; font-size: 16px; cursor: pointer; }
+  #step-description { margin-top: 20px; padding: 15px; background: #fff; border: 1px solid #ccc; border-radius: 5px; }
+</style>
+
+<script>
+  const steps = [
+    {
+      title: "Raw Material Preparation",
+      text: "The steelmaking process begins with the careful selection and preparation of essential raw materials:\n\n- Iron Ore: Typically hematite or magnetite, iron ore is crushed and screened to achieve the desired particle size for efficient reduction in the blast furnace.\n- Coke: Derived from metallurgical coal through a high-temperature carbonization process, coke serves both as a fuel and a reducing agent. It is graded for strength and porosity to ensure optimal furnace performance.\n- Limestone: A fluxing agent, limestone is crushed and sized to facilitate the removal of impurities such as silica and alumina during smelting. It helps form slag, which captures these impurities.\n\nThese materials are weighed, blended, and stored in silos or bunkers before being charged into the blast furnace. The quality and consistency of this preparation stage are critical for achieving efficient melting, minimizing energy consumption, and ensuring the chemical integrity of the final steel product.",
+       image: "Raw_Material_Preparation.png"
+    },
+    {
+      title: "Melting",
+      text: "Raw materials are introduced into a blast furnace or electric arc furnace:\n\n- High temperatures melt the iron ore, coke, and limestone.\n- The result is molten iron, which forms the base for steel production.",
+      image: "RandomFileName_00fdb667-ff87-4455-9e91-5d8f3db17f51.png"
+    },
+    {
+      title: "Refining",
+      text: "Oxygen is injected to reduce carbon and remove impurities. This step transforms molten iron into steel.",
+      image: "RandomFileName_a4e62142-3b77-4e2e-a0c7-daf7a185ff38.png"
+    },
+    {
+      title: "Alloying",
+      text: "Elements like chromium, nickel, or vanadium are added to enhance properties such as strength, ductility, or corrosion resistance.",
+      image: "RandomFileName_6decae53-00c2-4974-bd8e-ef9216526a16.png"
+    },
+    {
+      title: "Casting",
+      text: "The molten steel is poured into molds or continuously cast into slabs, blooms, or billets for shaping.",
+      image: "RandomFileName_eb6672d4-45fc-4734-8235-a3fbdb9e3e34.png"
+    },
+    {
+      title: "Heat Treatment",
+      text: "The solidified steel undergoes thermal cycles (e.g., annealing, quenching, tempering) to optimize its microstructure and mechanical performance.",
+      image: "RandomFileName_eb6672d4-45fc-4734-8235-a3fbdb9e3e34.png"
+    }
+  ];
+
+  function showStep(index) {
+    document.getElementById("step-title").innerText = steps[index].title;
+    document.getElementById("step-text").innerText = steps[index].text;
+    document.getElementById("step-image").src = steps[index].image;
+  }
+</script>
+
+
+
+
+
+
+<script>
+
+    
+    {
+        "title": "Desulfurization",
+        "text": (
+            "Sulfur is removed from molten iron to improve steel quality:\n\n"
+            "- Reagents like magnesium or calcium are injected.\n"
+            "- Reduces brittleness and enhances mechanical properties."
+        ),
+        "image": "RandomFileName_689897c0-61ab-4c80-ae4b-4e0db1fe9e1d.png"
+    },
+    {
+        "title": "Refining",
+        "text": (
+            "Refining removes impurities and adjusts the chemical composition:\n\n"
+            "- Oxygen is injected to reduce carbon content.\n"
+            "- Impurities like phosphorus and silicon are eliminated.\n"
+            "- This transforms molten iron into steel."
+        ),
+        "image": "RandomFileName_a4e62142-3b77-4e2e-a0c7-daf7a185ff38.png"
+    },
+    {
+        "title": "Secondary Metallurgy",
+        "text": (
+            "Post-refining treatments ensure precise composition and cleanliness:\n\n"
+            "- Vacuum Degassing: Removes dissolved gases.\n"
+            "- Argon Stirring: Promotes homogenization.\n"
+            "- Ladle Furnace: Adjusts temperature and alloy content."
+        ),
+        "image": "RandomFileName_1bc8053f-36fc-4e42-87d4-31e3c29f5b3b.png"
+    },
+    {
+        "title": "Alloying",
+        "text": (
+            "Alloying enhances the properties of steel by adding specific elements:\n\n"
+            "- Chromium: Improves corrosion resistance.\n"
+            "- Nickel: Enhances toughness and ductility.\n"
+            "- Vanadium: Increases strength and wear resistance."
+        ),
+        "image": "RandomFileName_6decae53-00c2-4974-bd8e-ef9216526a16.png"
+    },
+    {
+        "title": "Casting",
+        "text": (
+            "Molten steel is shaped into solid forms through casting:\n\n"
+            "- Ingot Casting: Steel is poured into molds.\n"
+            "- Continuous Casting: Steel is solidified into slabs, blooms, or billets."
+        ),
+        "image": "RandomFileName_eb6672d4-45fc-4734-8235-a3fbdb9e3e34.png"
+    },
+    {
+        "title": "Rolling",
+        "text": (
+            "Solidified steel is passed through rollers to reduce thickness and shape it:\n\n"
+            "- Enhances mechanical properties through deformation.\n"
+            "- Refines grain structure and surface finish."
+        ),
+        "image": "Image_3"
+    },
+    {
+        "title": "Heat Treatment",
+        "text": (
+            "Heat treatment modifies the microstructure and mechanical properties of steel:\n\n"
+            "- Annealing: Softens steel and improves ductility.\n"
+            "- Quenching: Rapid cooling to increase hardness.\n"
+            "- Tempering: Reheating quenched steel to reduce brittleness."
+        ),
+        "image": "RandomFileName_847a88b2-d299-4e23-bbf4-41dcbaa2a956.png"
+    },
+    {
+        "title": "Surface Treatment",
+        "text": (
+            "Final surface finishing enhances appearance and corrosion resistance:\n\n"
+            "- Pickling: Removes scale and oxides.\n"
+            "- Coating: Applies protective layers like zinc or paint.\n"
+            "- Polishing: Improves surface smoothness and aesthetics."
+        ),
+        "image": "RandomFileName_5b9155d8-fd9c-4f25-9c1b-3fd7eaddbe19.png"
+    }
+]
+
+# Print the updated steps array
+for step in steps:
+    print("\nTitle:", step["title"])
+    print("Text:\n", step["text"])
+    print("Image:", step["image"])
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="links" style="display: flex; justify-content: space-between; margin-top: 30px;">
              <ul style="list-style: none; padding: 0; margin: 0;">
                  <li>

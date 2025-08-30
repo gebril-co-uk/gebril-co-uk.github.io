@@ -1,6 +1,6 @@
 <head>
     <title>
-        Alloy Design & Phase Transformations Research Group
+        Steel Alloy-Making Process | Alloy Design & Phase Transformations Research Group
     </title>
     <link rel="icon" type="image/png" href="https://gebril.co.uk/files/Favicon.png"/>
     <meta name="description" content="Explore the steel alloy-making process with the Alloy Design & Phase Transformations Research Group—linking raw materials, metallurgy, and advanced research in alloy innovation.">
@@ -144,12 +144,7 @@
                 </div>
           
        
-                            
-                     
-
-
-
-
+ 
 
   <div class="steps">
     <button onclick="showStep(0)">1. Raw Material Preparation</button>
@@ -223,7 +218,7 @@
 
       {
         title: "Desulfurisation",
-        text: `<p><strong>Desulfurisation</strong> is an optional but often vital step for producing high-grade steels. 
+        text: `<p><strong>Desulfurisation (pre-refining)</strong> is an optional but often vital step for producing high-grade steels. 
           Although sulfur occurs only in small amounts, even trace levels can make steel brittle and prone to cracking.</p>
 
           <ul>
@@ -261,7 +256,7 @@
          <p><em>Looking forward:</em> Modern research is exploring <strong>low-emission refining</strong> using oxygen-enriched or hydrogen-assisted processes, 
          <strong>nano-additive slags</strong> for more efficient impurity capture, and <strong>AI-driven process control</strong> to achieve ultra-precise compositions with minimal energy use and near-zero CO<sub>2</sub> emissions.</p>`,
 
-        image: "refining1.png"
+        image: "refining.png"
       },
 
 
@@ -270,34 +265,130 @@
 
       {
         title: "Secondary Metallurgy",
-        text: "Processes like vacuum degassing and ladle furnace adjustment refine steel composition.",
-        image: "secondary_metallurgy.png"
-      },
-      {
-        title: "Alloying",
-        text: "Elements such as chromium, nickel, and vanadium are added to enhance properties.",
+        text: `<p>After primary refining, molten steel enters <strong>secondary metallurgy (post-refining)</strong>, a precision stage that fine-tunes chemistry, temperature, and cleanliness to meet demanding performance targets.</p>
+            <ul>
+
+            <li><strong>Vacuum Degassing:</strong> Removes dissolved hydrogen and nitrogen to prevent porosity and hydrogen embrittlement, improving reliability in high-stress applications.</li>
+            <li><strong>Argon Stirring:</strong> Inert argon gas bubbling homogenises temperature and composition, minimises segregation, and helps float inclusions into the slag.</li>
+            <li><strong>Ladle Furnace:</strong> Fine-tuning occurs here, where alloying elements are precisely adjusted and temperature is optimized. This step enables micro-alloyed steels, ultra-clean grades, and high-performance compositions tailored for advanced technologies.</li>
+            <li><strong>Inclusion Engineering (Ca Treatment):</strong> Converts hard alumina inclusions into low-melting calcium aluminates, enhancing castability and toughness.</li>
+           </ul>
+
+           <p><em>Looking forward:</em> Secondary metallurgy is rapidly evolving with real-time sensors, machine learning algorithms, and AI-driven ladle models that can predict and adjust steel chemistry on the fly. Future innovations may include carbon-neutral stirring techniques, plasma-based degassing, or even in-line additive manufacturing integration, where steel is not only refined but also shaped at the molten stage. In essence, secondary metallurgy transforms molten steel into a precision-engineered material, ready for solidification into forms that will define the technologies of tomorrow.</p>`,
+         image: "secondary_metallurgy.png"
+       },
+
+
+
+       {
+         title: "Alloying",
+         text: `<p>Once the steel is refined and cleaned, carefully selected alloying elements are introduced to impart specific mechanical, thermal, and chemical properties. </p>
+               <ul>
+
+              <li><strong>Carbon (C):</strong> The most influential element, controlling hardness, ductility, and strength. Typically adjusted after secondary metallurgy by adding solid recarburisers such as graphite, petroleum coke, or carbon-rich ferroalloys. This ensures the final carbon level meets the steel’s target specification while maintaining cleanliness and minimising unwanted inclusions.</li>
+
+
+              <li><strong>Chromium & Nickel:</strong> Enhance corrosion resistance and toughness, forming the backbone of stainless steels.</li>
+
+              <li><strong>Molybdenum, Vanadium, and Tungsten:</strong> Provide high-temperature strength, wear resistance, and creep resistance, vital for aerospace and power generation applications.</li>
+
+
+              <li><strong>Niobium & Titanium:</strong> Act as grain refiners and stabilisers, improving toughness and weldability.</li>
+              </ul>
+
+              Alloying is more than mixing, it is a science of precision, where fractions of a percent can drastically alter steel's performance. Modern practices use real-time sensors and AI-driven predictive models to optimise alloying strategies, ensuring consistency and minimising resource waste. 
+
+
+              <p><em>Looking ahead,</em> alloying is set to evolve with high-entropy alloys and nano-engineered steels, promising unprecedented strength, corrosion resistance, and environmental sustainability for next-generation infrastructure, clean energy systems, and beyond.</p>`,
         image: "alloying.png"
-      },
+        },
+
+
+
+
+
       {
+        
         title: "Casting",
-        text: "Molten steel is cast into slabs, blooms, or billets.",
+        text: `<p>The molten steel is carefully transferred into moulds, where it solidifies into slabs, blooms, or billets. This step bridges the transition from the liquid phase to the semi-finished solid state, setting the foundation for downstream shaping processes. Innovations in continuous casting technology allow for tighter control over cooling rates, reducing defects such as segregation and porosity, and enabling higher productivity. </p>
+
+            <p><em>Looking forward,</em> emerging concepts such as digital twin casting lines, adaptive moulds with smart materials, and AI-driven predictive control promise unprecedented precision and sustainability. These innovations aim to deliver defect-free steels and to enable near-net-shape casting that reduces waste and energy demand, shaping the steels of next-generation applications.</p>`,
         image: "casting.png"
       },
+
+
+
+
+
+
       {
         title: "Rolling",
-        text: "Steel is rolled to refine its structure and shape it for final use.",
-        image: "rolling.png"
-      },
+        text: `
+    <p>Rolling reduces thickness, shapes the section, and engineers the steel’s microstructure. After reheating, slabs/blooms/billets pass through a train of work and backup rolls where precise control of temperature, reduction, and speed determines grain size, texture, and final properties.</p>
+
+    <ul>
+      <li><strong>Hot rolling (austenitic range):</strong> Large reductions break up cast structure, promote dynamic/static recrystallisation, and deliver fine, equiaxed grains. Descaling, precise draft schedules, and accelerated cooling (TMCP) help achieve high strength with good toughness.</li>
+
+      <li><strong>Cold rolling (room temperature):</strong> Adds dimensional accuracy and surface quality. Work hardening raises strength; subsequent annealing restores ductility and can tailor texture for deep-drawability or electrical steels.</li>
+
+      <li><strong>Controlled rolling &amp; cooling:</strong> Temperature-gradient passes, inter-stand cooling, and laminar/accelerated cooling tune phase balance (ferrite/pearlite/bainite) and precipitation, enabling plate, strip, and long products that meet demanding toughness and weldability targets.</li>
+
+      <li><strong>Shape &amp; flatness control:</strong> Automatic gauge control (AGC), roll bending/shifting, and crown/edge-drop management keep thickness and flatness within tight tolerances while minimising residual stress and waviness.</li>
+
+      <li><strong>Surface integrity:</strong> Clean lubrication, roll texturing, and on-line inspection (laser gauges, cameras) suppress defects such as scale pits, chatter marks, and inclusions.</li>
+    </ul>
+
+    <p><em>Looking forward,</em> digital-twin mills with AI-driven closed-loop control will adapt drafts, roll gap, cooling, and speed in real time to hit target microstructures on the fly. New in-line sensing (magnetic/acoustic proxies for grain size and phase), self-learning schedule optimisation, and adaptive roll thermal models will push tolerances further while cutting scrap and energy. Electrified, hydrogen-fuelled reheating and biodegradable lubricants will lower CO<sub>2</sub> and water use, and near-net-shape thin-slab/strip casting-to-rolling lines will shorten routes from melt to product without sacrificing performance.</p>`,
+     image: "rolling.png"
+    },
+
+
+
       {
         title: "Heat Treatment",
-        text: "Annealing, quenching, and tempering adjust microstructure and properties.",
-        image: "heat_treatment.png"
-      },
+        text: `
+    <p>Heat treatment fine-tunes the balance of strength, ductility, hardness, and toughness in steel. By carefully controlling heating, holding, and cooling rates, engineers manipulate microstructure to match performance requirements in construction, automotive, aerospace, energy, and tooling applications.</p>
+
+    <ul>
+      <li><strong>Annealing:</strong> Heating followed by slow cooling relieves stresses, softens the steel, and promotes a uniform, equiaxed ferrite-pearlite structure. Variants such as full, process, and spheroidizing annealing target machinability and formability.</li>
+
+      <li><strong>Quenching:</strong> Rapid cooling in water, oil, or gas transforms austenite to martensite, producing very high hardness and strength, but often at the expense of brittleness.</li>
+
+      <li><strong>Tempering:</strong> Reheating quenched steels to intermediate temperatures reduces brittleness, restores ductility, and precipitates carbides, creating tempered martensite with a strength–toughness balance.</li>
+
+      <li><strong>Normalising:</strong> Air cooling from the austenitic region produces refined pearlite and ferrite, enhancing toughness and homogenising microstructure after hot working.</li>
+
+      <li><strong>Specialised treatments:</strong> Carburising, nitriding, and carbonitriding enrich the surface with interstitials, generating hard, wear-resistant cases while keeping a tough core. Austempering and martempering control phase paths to minimise distortion and cracking.</li>
+
+     <li><strong>Isothermal Transformation (Bainite):</strong> Holding steel isothermally at intermediate temperatures produces bainite, a microstructure with a unique balance of strength, toughness, and wear resistance, increasingly important for rails, gears, and advanced automotive steels.</li>
+
+    </ul>
+
+    <p><em>Looking forward,</em> heat treatment will evolve into a science of precision and sustainability. Real-time microstructure monitoring using advanced sensors and in-situ diffraction, coupled with AI-driven predictive control, will enable “smart furnaces” that adapt cycles on demand. Hybrid treatments integrating induction, laser, or plasma heating promise localisation of properties with minimal energy use. Vacuum-based, hydrogen-assisted, and electrified furnaces will drastically reduce carbon emissions. Future digital-twin platforms will simulate phase transformations and stresses in real time, unlocking defect-free, distortion-controlled, and custom-tailored steels for fusion reactors, hydrogen infrastructure, ultra-light transport, and circular manufacturing systems.</p>`,
+
+       image: "heat_treatment.png"
+     },
+
       {
-        title: "Surface Treatment",
-        text: "Processes like pickling, coating, and polishing enhance durability and appearance.",
-        image: "surface_treatment.png"
-      }
+  title: "Surface Treatment",
+  text: `
+    <p>Surface treatment protects steel against corrosion, wear, and fatigue, while also improving aesthetics and functionality. These processes extend service life, reduce maintenance costs, and tailor the steel surface for specialised environments such as marine, aerospace, biomedical, and high-temperature applications.</p>
+
+    <ul>
+      <li><strong>Pickling:</strong> Acid treatment removes mill scale, oxides, and surface impurities, creating a clean base for subsequent coatings or finishing steps.</li>
+
+      <li><strong>Coating:</strong> Methods such as galvanising, aluminising, electroplating, and organic/polymer coatings provide corrosion resistance, thermal stability, or decorative finishes tailored to industry needs.</li>
+
+      <li><strong>Polishing & Mechanical Finishing:</strong> Grinding, polishing, and shot blasting refine surface roughness, enhance fatigue resistance, and improve appearance.</li>
+
+      <li><strong>Advanced Treatments:</strong> Techniques like laser surface melting, plasma nitriding, PVD/CVD coatings, and thermal spray create tailored surfaces with enhanced hardness, wear resistance, or catalytic functionality.</li>
+    </ul>
+
+    <p><em>Looking forward,</em> surface engineering is shifting toward multifunctional and sustainable solutions. Next-generation coatings will be self-healing, smart, and adaptive — capable of repairing micro-cracks, repelling fouling, or altering wettability on demand. Nanostructured and bio-inspired surfaces will combine corrosion resistance with antibacterial or catalytic functions, opening pathways for medical implants, energy devices, and hydrogen infrastructure. Meanwhile, environmentally friendly, chromium-free processes and recyclable coating systems will dominate, aligning with the global push toward greener manufacturing.</p>
+  `,
+  image: "surface_treatment.png"
+}
+
     ];
 
     function showStep(index) {

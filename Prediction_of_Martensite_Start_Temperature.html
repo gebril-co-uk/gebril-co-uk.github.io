@@ -35,6 +35,25 @@
         }
 
 
+      
+/* Apply to all links inside .links, not just those in ul li */
+.links a:link,
+.links a:active {
+    color: blue;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.links a:visited {
+    color: darkred !important;
+}
+
+
+
+
 
     .links ul li a:link, 
 .links ul li a:active {
@@ -97,13 +116,12 @@
 
             <!-- <div class="grid-container"> -->
                 <div class="abstract-box">
-                        Accurate prediction of the martensite start temperature (Mₛ) is essential for optimising the mechanical performance of steels and enabling data-driven alloy design. This study proposes, for the first time, a physics- and knowledge-informed multi-branch Transformer fusion model that integrates chemical composition, physical features, and empirical equation-based features for precise Mₛ prediction. A curated dataset of 1,100 steel samples was compiled from the literature, encompassing a comprehensive range of compositional and physical variables relevant to phase transformation behaviour. The model architecture employs dedicated multilayer perceptron (MLP) branches for each feature group, followed by a Transformer encoder to capture global dependencies and nonlinear interactions. Compared with baseline models, including conventional MLPs and lasso regression, the proposed model achieves superior predictive performance (RMSE = 33.9°C, MAE = 14°C, R² = 0.94). SHAP-based interpretability analysis reveals that the model identifies C, Ni, and Ceq as key contributors, forming a dominant Ni–Ceq–C interaction network modulated by structural descriptors. Sensitivity analyses confirm these trends and support the model’s physical consistency.
-                        To experimentally validate the model, dilatometry tests on two newly designed steels confirmed that the predicted Mₛ values (231°C and 165°C) closely matched the experimental results (238°C and 169°C), with deviations of only 7°C and 4°C, respectively. This work establishes a novel, physically grounded, and interpretable machine learning framework for Mₛ prediction, highlighting the value of integrating physics-based knowledge with advanced deep learning to accelerate alloy design and mechanical property optimisation.
+                        Accurate prediction of the martensite start temperature (Mₛ) is essential for optimising the mechanical performance of steels and enabling data-driven alloy design. This study proposes, for the first time, a physics- and knowledge-informed multi-branch Transformer fusion model that integrates chemical composition, physical features, and empirical equation-based features for precise Mₛ prediction. A curated dataset of 1,100 steel samples was compiled from peer-reviewed studies and technical reports published between 1973 and 2023, with a primary focus on structural steels, encompassing a comprehensive range of compositional and physical variables relevant to phase transformation behaviour. The model architecture employs dedicated multilayer perceptron (MLP) branches for each feature group, followed by a Transformer encoder to capture global dependencies and nonlinear interactions. Compared with baseline models, including conventional MLPs and lasso regression, the proposed model achieves superior predictive performance (RMSE = 33.9 °C, MAE = 14 °C, R² = 0.94). SHAP-based interpretability analysis reveals that the model identifies C, Ni, and Ceq as key contributors, forming a dominant Ni–Ceq–C interaction network modulated by structural descriptors. Sensitivity analyses confirm these trends and support the model’s physical consistency. To experimentally validate the model, dilatometry tests on two newly designed steels confirmed that the predicted Mₛ values (231 °C and 165 °C) closely matched the experimental results (238 °C and 169 °C), with deviations of only 7 °C and 4 °C, respectively. This work establishes a novel, physically grounded, and interpretable machine learning framework for Mₛ prediction, highlighting the value of integrating physics-based knowledge with advanced deep learning to accelerate alloy design and mechanical property optimisation.
 
 
 
                     <p style="font-style: italic; font-size: 18px; color: #6E44FF; margin-top: 15px; text-align: center;">
-                        Published in <em>Journal of Nuclear Materials</em>, Vol. 615 (2025), Article 155984. </p>
+                        Published in <em>Materials Today Communications</em>, Vol. 615 (2025), Article 155984. </p>
 
                 </div>
 
@@ -114,8 +132,16 @@
                 <h2 style="text-align: center; color: #6E44FF; font-family: 'Georgia', serif; font-weight: 500; letter-spacing: 0.5px; font-style: italic;">Martensite Start Temperature \(M_s\) Predictor</h2>
 
 
-  
+                <!-- Additional note -->
 
+                <div class="links">
+
+                <p style="margin-top: 20px; color: #444; font-family: 'Georgia', serif; font-size: 16px; font-style: normal;">
+                    This equation has been validated across a broader range of chemical compositions than typical models. For exact compositional limits and validation details, please refer to the <a href="papers/Supplementary_Material_Radiation-induced_DBTT_hifts.docx"> supplementary data.</a>
+                </p>
+                </div>
+        
+       
 
                  <div class="math-container" style="text-align: center; font-size: 18px; margin-top: 20px;">
     
@@ -135,6 +161,9 @@
                  $$
                 </p>
             </div>
+
+
+                
 
 
 

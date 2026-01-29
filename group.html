@@ -134,15 +134,23 @@
     
 }
 
+
+
 .group-nav {
     position: fixed;
-    left: 560px;
-    top: 90px; /* below navbar */
+    top: 90px;
+    left: calc(50% - 650px); /* aligns to left of content */
     width: 220px;
     /*background: #f7f7f7;  */
     /* border: 1px solid #ddd; */
     padding: 20px;
     z-index: 1000;
+}
+
+@media (max-width: 1300px) {
+    .group-nav {
+        display: none;
+    }
 }
 
 

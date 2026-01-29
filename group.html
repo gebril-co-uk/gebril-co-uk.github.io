@@ -120,6 +120,70 @@
      }
 
 
+
+
+
+
+
+     html {
+    scroll-behavior: smooth;
+}
+
+.group-layout {
+    display: block;
+    
+}
+
+.group-nav {
+    position: fixed;
+    left: 560px;
+    top: 90px; /* below navbar */
+    width: 220px;
+    /*background: #f7f7f7;  */
+    /* border: 1px solid #ddd; */
+    padding: 20px;
+    z-index: 1000;
+}
+
+
+.group-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.group-nav li {
+    margin-bottom: 15px;
+}
+
+.group-nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #333;
+}
+
+.group-nav a:hover {
+    color: #007bff;
+}
+
+.group-content {
+    flex: 1;
+}
+
+.group-section {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding-bottom: 0px;
+
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #2c3aa0;
+    
+}
+
+.home_item + .group-section {
+    margin-top: 5px;   /* reduce space after last member */
+}
+
 </style>
 
 
@@ -150,8 +214,31 @@
 
     <div class="page">
 
-        <h3>Group Members</h3>
 
+
+    <h3>Group Members</h3>
+
+
+    <div class="group-layout">
+     
+         <div class="group-nav">
+             <ul>
+                 <li><a href="#staff">Academic Staff</a></li>
+                 <li><a href="#phd">Ph.D. Research Students</a></li>
+                 <li><a href="#msc">Master of Philosophy Research Students</a></li>
+                 <li><a href="#internship">Research Interns, Short Projects</a></li>
+             </ul>
+         </div>
+     
+        <div class="group-content">
+             <!-- ALL your existing group content goes here -->
+         
+     
+        
+
+
+         <!-- ================= STAFF ================= -->
+         <h2 id="staff" class="group-section">Academic Staff</h2>
 
 
         <!-- Member: Gebril El-Fallah -->
@@ -211,7 +298,13 @@
         </div>
 
 
- 
+
+
+
+
+
+        <!-- ================= PhD Students ================= -->
+        <h2 id="phd" class="group-section">Ph.D. Research Students</h2>
 
 
         <!-- Member: Pengxin Wang -->
@@ -578,6 +671,25 @@
 
             </div>
         </div>
+
+
+
+
+       
+
+
+
+
+
+        <!-- ================= Interns ================= -->
+        <h2 id="internship" class="group-section">Research Interns, Short Projects</h2>
+
+
+
+
+
+
+
 
 
 

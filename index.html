@@ -107,6 +107,32 @@
         /* padding: 0; */ /* Remove default padding
 
         } */
+
+
+
+        .index-left-logo {
+            position: absolute;
+            top: 135px; /* below navbar + title */
+            left: calc(50% - 650px); /* align with page content */
+            width: 200px;
+            text-align: center;
+            
+        }
+        
+        .index-left-logo img {
+            width: 100%;
+            max-width: 180px;
+            height: auto;
+            opacity: 0.95;
+        }
+
+        @media (max-width: 1200px) {
+        .index-left-logo {
+            display: none;
+           }
+        }
+
+
         
     </style>
 
@@ -163,7 +189,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   
 
-    <div class="page"> 
+    <div class="page">
+
+        <div class="index-left-logo">
+             <img src="files/group-logo.png" alt="Alloy Design & Phase Transformations logo">
+        </div>
+
         <h3>About</h3>
             <div class="grid-container">
                 <div class="item">

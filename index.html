@@ -134,106 +134,107 @@
 
 
 
-
-
-        /* Section */
-.ultra-showcase {
-    margin-top: 80px;
+        .research-carousel {
+    margin-top: 60px;
     text-align: center;
+}
+
+.carousel-wrapper {
     position: relative;
-}
-
-/* Animated background 🌌 */
-.ultra-showcase::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 20% 30%, rgba(0,119,204,0.15), transparent),
-                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.08), transparent);
-    z-index: 0;
-}
-
-/* Container */
-.ultra-container {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
-    perspective: 1200px;
-    position: relative;
-    z-index: 1;
-}
-
-/* Card */
-.ultra-card {
-    width: 320px;
-    height: 420px;
-    perspective: 1000px;
-}
-
-/* Inner */
-.card-inner {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
-/* Flip on hover */
-.ultra-card:hover .card-inner {
-    transform: rotateY(180deg);
-}
-
-/* Faces */
-.card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 16px;
     overflow: hidden;
-    backface-visibility: hidden;
+    border-radius: 12px;
 }
 
-/* Front */
-.card-front img,
-.card-front video {
+/* Track */
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Slide */
+.carousel-slide {
+    min-width: 100%;
+    position: relative;
+}
+
+/* Image & video */
+.carousel-slide img,
+.carousel-slide video {
     width: 100%;
-    height: 100%;
+    height: 420px;
     object-fit: cover;
 }
 
-/* Title overlay */
-.title {
+/* Caption */
+.carousel-caption {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 15px;
-    color: white;
-    font-weight: bold;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-}
-
-/* Back */
-.card-back {
-    background: rgba(0,0,0,0.85);
-    color: white;
-    transform: rotateY(180deg);
     padding: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    color: white;
+    text-align: left;
+
+    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
 }
 
-/* Glow effect ✨ */
-.ultra-card:hover {
-    box-shadow: 0 20px 40px rgba(0,119,204,0.3);
+.carousel-caption h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.carousel-caption p {
+    margin-top: 6px;
+    opacity: 0.9;
+}
+
+/* Arrows */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-btn:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+
+
+.carousel-dots {
+    position: absolute;
+    bottom: 12px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot.active {
+    background: white;
+    transform: scale(1.2);
 }
 
 
 
- 
     </style>
 
       
@@ -249,35 +250,69 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<script>
-document.querySelectorAll('.ultra-card').forEach(card => {
-
-    card.addEventListener('mousemove', e => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        const rotateX = -(y / rect.height - 0.5) * 15;
-        const rotateY = (x / rect.width - 0.5) * 15;
-
-        card.querySelector('.card-inner').style.transform =
-            `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    });
-
-    card.addEventListener('mouseleave', () => {
-        card.querySelector('.card-inner').style.transform =
-            "rotateX(0) rotateY(0)";
-    });
-});
-</script>
-
-
-
-
 
 
 </head>
 
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    let index = 0;
+    const track = document.querySelector('.carousel-track');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+    const total = slides.length;
+    let interval;
+
+    function updateSlide() {
+        track.style.transform = `translateX(-${index * 100}%)`;
+
+        // Update dots
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[index].classList.add('active');
+    }
+
+    function nextSlide() {
+        index = (index + 1) % total;
+        updateSlide();
+    }
+
+    function prevSlide() {
+        index = (index - 1 + total) % total;
+        updateSlide();
+    }
+
+    document.querySelector('.next').onclick = nextSlide;
+    document.querySelector('.prev').onclick = prevSlide;
+
+    // Dot click navigation 🔥
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            index = i;
+            updateSlide();
+        });
+    });
+
+    /* Auto-slide */
+    function startAuto() {
+        interval = setInterval(nextSlide, 4000);
+    }
+
+    function stopAuto() {
+        clearInterval(interval);
+    }
+
+    const wrapper = document.querySelector('.carousel-wrapper');
+
+    wrapper.addEventListener('mouseenter', stopAuto);
+    wrapper.addEventListener('mouseleave', startAuto);
+
+    startAuto();
+
+});
+</script>
 
 
 
@@ -342,75 +377,72 @@ document.querySelectorAll('.ultra-card').forEach(card => {
 
             <!-- 🔬 Advanced Research Showcase -->
 
-            <div class="ultra-showcase">
 
-    <h3>Research Experience</h3>
+            <div class="research-carousel">
 
-    <div class="ultra-container">
+            <h3>Research Highlights</h3>
 
-        <!-- CARD -->
-        <div class="ultra-card">
-            <div class="card-inner">
+            <div class="carousel-wrapper">
 
-                <!-- FRONT -->
-                <div class="card-front">
-                    <img src="SEM.png">
-                    <div class="title">Bainite Nucleation</div>
-                </div>
+    <div class="carousel-track">
 
-                <!-- BACK -->
-                <div class="card-back">
-                    <h2>Atomic Mechanism</h2>
-                    <p>
-                        NiAl precipitates act as nucleation sites, altering transformation pathways and refining bainitic structures.
-                    </p>
-                </div>
-
+        <!-- Slide 1 -->
+        <div class="carousel-slide">
+            <img src="SEM.png">
+            <div class="carousel-caption">
+                <h2>Bainite Nucleation</h2>
+                <p>NiAl-driven transformation at atomic scale</p>
             </div>
         </div>
 
-        <!-- CARD -->
-        <div class="ultra-card">
-            <div class="card-inner">
-
-                <div class="card-front">
-                    <img src="TEM.png">
-                    <div class="title">TEM Analysis</div>
-                </div>
-
-                <div class="card-back">
-                    <h2>Directional Growth</h2>
-                    <p>
-                        Bainite evolves in multiple crystallographic directions under controlled thermal conditions.
-                    </p>
-                </div>
-
+        <!-- Slide 2 -->
+        <div class="carousel-slide">
+            <img src="TEM.png">
+            <div class="carousel-caption">
+                <h2>TEM Analysis</h2>
+                <p>Directional growth of bainitic ferrite</p>
             </div>
         </div>
 
-        <!-- VIDEO CARD 🔥 -->
-        <div class="ultra-card">
-            <div class="card-inner">
+        <!-- Slide 3 -->
+        <div class="carousel-slide">
+            <img src="IPF-Z-with1.png">
+            <div class="carousel-caption">
+                <h2>EBSD Mapping</h2>
+                <p>Microstructure evolution and grain behavior</p>
+            </div>
+        </div>
 
-                <div class="card-front">
-                    <video muted loop autoplay>
-                        <source src="test.mp4" type="video/mp4">
-                    </video>
-                    <div class="title">Live Transformation</div>
-                </div>
-
-                <div class="card-back">
-                    <h2>Real-Time Physics</h2>
-                    <p>
-                        Observing phase transformation dynamics in real-time provides insight into kinetic pathways.
-                    </p>
-                </div>
-
+        <!-- Slide 4 -->
+        <div class="carousel-slide">
+            <video muted autoplay loop playsinline>
+                <source src="test.mp4" type="video/mp4">
+            </video>
+            <div class="carousel-caption">
+                <h2>Live Transformation</h2>
+                <p>Real-time phase transformation</p>
             </div>
         </div>
 
     </div>
+
+    <!-- ✅ DOTS GO HERE -->
+    <div class="carousel-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <!-- Arrows -->
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
+
+           </div>
+       </a>
 </div>
+
+
 
 
 

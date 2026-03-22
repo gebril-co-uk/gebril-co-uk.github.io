@@ -191,8 +191,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 30px;
-    background: rgba(0,0,0,0.4);
+    font-size: 24px;
+    background: rgba(0,0,0,0.3);
     color: white;
     border: none;
     padding: 10px;
@@ -206,7 +206,6 @@
 
 .prev { left: 15px; }
 .next { right: 15px; }
-
 
 
 .carousel-dots {
@@ -447,8 +446,12 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
     <!-- Arrows -->
-    <button class="carousel-btn prev">&#10094;</button>
-    <button class="carousel-btn next">&#10095;</button>
+
+    <button class="carousel-btn prev"><span class="arrow">&#8592;</span></button>
+    <button class="carousel-btn next"><span class="arrow">&#8594;</span></button>
+
+    <!-- <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>-->
 
            </div>
        </a>

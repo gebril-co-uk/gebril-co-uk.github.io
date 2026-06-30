@@ -1,56 +1,114 @@
 <head>
     <meta charset="UTF-8">
+
     <title>Creep-Fatigue Design of RAFM Steels Using Physics-Informed and Data-Driven Surrogate Models with Multi-Objective Optimisation | Alloy Design & Phase Transformations Research Group</title>
-    <meta name="description" content="This study presents a stacking ensemble machine learning model to predict DBTT shifts in irradiated RAFM steels, integrating XGBoost, RF, GBDT, and MLP.">
-    <meta name="keywords" content="RAFM steels, DBTT, radiation hardening, machine learning, alloy design, nuclear materials, stacking ensemble, SHAP, genetic algorithm">
-    <meta name="author" content="Pengxin Wang, G. M. A. M. El-Fallah">
+
+    <meta name="description" content="This study develops an interpretable creep-fatigue alloy design framework for reduced-activation ferritic-martensitic (RAFM) steels using a dual-mechanism physics-informed neural network for creep rupture prediction, an MLP model for low-cycle fatigue life, SHAP interpretability, and NSGA-II multi-objective optimisation.">
+
+    <meta name="keywords" content="RAFM steels, reduced-activation ferritic-martensitic steels, creep rupture, low-cycle fatigue, creep-fatigue interaction, physics-informed neural networks, PINNs, machine learning, surrogate models, SHAP, NSGA-II, multi-objective optimisation, Eurofer97, fusion materials, nuclear materials, alloy design">
+
+    <meta name="author" content="Pengxin Wang, Yian Lin, Mingda Tian, G. M. A. M. El-Fallah">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://gebril.co.uk/Radiation_Induced_DBTT_Shifts">
+
+    <link rel="canonical" href="https://gebril.co.uk/Creep_Fatigue_Design_RAFM_Steels">
     <link rel="icon" type="image/png" href="https://gebril.co.uk/files/Favicon.png"/>
 
-    <!-- Open Graph / Twitter (social sharing) -->
-    <meta property="og:title" content="A Data-Driven ML Model for Radiation-Induced DBTT Shifts in RAFM Steels">
-    <meta property="og:description" content="Stacking-ensemble ML (XGBoost, RF, GBDT, MLP) to predict DBTT shifts in irradiated RAFM steels — includes SHAP explainability and GA feature selection.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://gebril.co.uk/Radiation_Induced_DBTT_Shifts">
-    <meta property="og:image" content="https://gebril.co.uk/files/og-image.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="@YourTwitterHandle">
+    <!-- Google Scholar / citation metadata -->
+    <meta name="citation_title" content="Creep-Fatigue Design of RAFM Steels Using Physics-Informed and Data-Driven Surrogate Models with Multi-Objective Optimisation">
+    <meta name="citation_author" content="Wang, Pengxin">
+    <meta name="citation_author" content="Lin, Yian">
+    <meta name="citation_author" content="Tian, Mingda">
+    <meta name="citation_author" content="El-Fallah, G. M. A. M.">
+    <meta name="citation_journal_title" content="Journal of Nuclear Materials">
+    <meta name="citation_volume" content="630">
+    <meta name="citation_publication_date" content="2026">
+    <meta name="citation_doi" content="10.1016/j.jnucmat.2026.156750">
+    <meta name="citation_online_date" content="2026/05/21">
 
+    <!-- Open Graph / Twitter social sharing -->
+    <meta property="og:title" content="Creep-Fatigue Design of RAFM Steels Using Physics-Informed and Data-Driven Surrogate Models">
+    <meta property="og:description" content="An interpretable framework combining PINNs, MLP surrogate modelling, SHAP analysis and NSGA-II optimisation to design RAFM steels with improved creep rupture and low-cycle fatigue performance for fusion-relevant conditions.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://gebril.co.uk/Creep_Fatigue_Design_RAFM_Steels">
+    <meta property="og:image" content="https://gebril.co.uk/files/og-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@gebrilalfallah">
+    <meta name="twitter:title" content="Creep-Fatigue Design of RAFM Steels Using Physics-Informed and Data-Driven Surrogate Models">
+    <meta name="twitter:description" content="PINN and MLP surrogate models with SHAP interpretability and NSGA-II optimisation for creep-fatigue-informed RAFM steel alloy design.">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/shared.css">
     <link rel="stylesheet" href="styles/research.css">
     <link rel="stylesheet" href="styles/navbar.css">
-    <link rel="stylesheet" href="styles/photographs.css"> <!-- Link to the new CSS file -->  
+    <link rel="stylesheet" href="styles/photographs.css">
 
     <!-- Fonts and Icons -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap">
 
-
-    <!-- Optional: JSON-LD structured data for the article -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "A Data-Driven Machine Learning Model for Radiation-Induced DBTT Shifts in RAFM Steels",
-    "author": [
-      {"@type":"Person","name":"Pengxin Wang"},
-      {"@type":"Person","name":"G. M. A. M. El-Fallah"}
-    ],
-    "url": "https://gebril.co.uk/Radiation_Induced_DBTT_Shifts",
-    "description": "A stacking-ensemble ML model to predict DBTT shifts in irradiated RAFM steels.",
-    "publisher": {"@type":"Organization","name":"Alloy Design & Phase Transformations Research Group"}
-  }
-  </script>
+    <!-- JSON-LD structured data for the article -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "headline": "Creep-Fatigue Design of RAFM Steels Using Physics-Informed and Data-Driven Surrogate Models with Multi-Objective Optimisation",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Pengxin Wang"
+        },
+        {
+          "@type": "Person",
+          "name": "Yian Lin"
+        },
+        {
+          "@type": "Person",
+          "name": "Mingda Tian"
+        },
+        {
+          "@type": "Person",
+          "name": "G. M. A. M. El-Fallah",
+          "email": "gmae2@leicester.ac.uk"
+        }
+      ],
+      "datePublished": "2026",
+      "dateModified": "2026-05-21",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Journal of Nuclear Materials"
+      },
+      "volumeNumber": "630",
+      "articleIdentifier": "156750",
+      "doi": "10.1016/j.jnucmat.2026.156750",
+      "url": "https://gebril.co.uk/Creep_Fatigue_Design_RAFM_Steels",
+      "description": "This article presents an interpretable creep-fatigue design framework for reduced-activation ferritic-martensitic steels. A dual-mechanism physics-informed neural network is used for creep rupture prediction, while a multilayer perceptron model predicts low-cycle fatigue life. SHAP analysis reveals the governing physics and Cr-W-Ta alloying interactions, and NSGA-II optimisation identifies RAFM compositions with improved predicted creep and fatigue performance compared with Eurofer97.",
+      "keywords": [
+        "Reduced-activation ferritic-martensitic steels",
+        "RAFM steels",
+        "Creep rupture",
+        "Low-cycle fatigue",
+        "Physics-informed neural networks",
+        "PINNs",
+        "Machine learning",
+        "Surrogate models",
+        "SHAP",
+        "NSGA-II",
+        "Multi-objective optimisation",
+        "Eurofer97",
+        "Fusion materials"
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Elsevier B.V."
+      }
+    }
+    </script>
 </head>
-
-
 
 
 <style>

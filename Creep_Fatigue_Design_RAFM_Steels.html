@@ -127,6 +127,26 @@
     
      }
 
+     .inline-math {
+    white-space: nowrap;
+}
+
+.inline-math sup,
+.inline-math sub {
+    font-size: 70%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+.inline-math sup {
+    top: -0.45em;
+}
+
+.inline-math sub {
+    bottom: -0.20em;
+}
+
      .links {
     margin-top: 20px;
         }
@@ -186,7 +206,10 @@
 
             <!-- <div class="grid-container"> -->
                 <div class="abstract-box">
-                        Designing reduced-activation ferritic-martensitic (RAFM) steels capable of simultaneously resisting creep deformation and low-cycle fatigue (LCF) damage is a key requirement for structural materials in future fusion demonstration reactors (DEMO), where components are exposed to elevated temperatures and cyclic loading. However, achieving balanced creep-fatigue performance remains challenging because the mechanisms governing long-term creep rupture and cyclic plasticity are fundamentally different and often conflicting. In this study, two complementary surrogate models are developed to address this creep-fatigue design challenge: a dual-mechanism physics-informed neural networks (PINNs) for predicting creep rupture behaviour and a multi-layer perceptron (MLP) model for LCF performance. The models are trained on consolidated datasets including experimental creep rupture data, cyclic fatigue properties, alloy compositions and thermophysical descriptors. The creep PINN achieves R<sup>2</sup> = 0.96 and captures the transition from stress-controlled dislocation creep at lower homologous temperatures (T/T<sub>m</sub> &lt; 0.4, where T<sub>m</sub> represents the alloy melting temperature) to diffusion-dominated behaviour at higher temperatures (T/T<sub>m</sub> &ge; 0.4), corresponding approximately to 500&ndash;600&deg;C for typical RAFM steels, while the fatigue MLP attains R<sup>2</sup> = 0.97. Model interpretability based on SHAP (SHapley Additive exPlanations) reveals temperature-dependent shifts in creep kinetics and identifies the total strain range (&Delta;&epsilon;<sub>total</sub>), temperature and Cr&ndash;W&ndash;Ta alloying interactions associated with precipitation strengthening as key factors influencing LCF behaviour. Feature interaction analysis based on SHAP interaction values further indicates cooperative Cr&ndash;W&ndash;Ta strengthening at lower temperatures and degradation-dominated behaviour at higher temperatures. Integrating both surrogate models into a multi-objective optimisation framework based on Non-dominated Sorting Genetic Algorithm II (NSGA-II) generated a Pareto front of alloy compositions with improved predicted creep rupture life and fatigue life compared with Eurofer97, achieving log<sub>10</sub>N<sub>f</sub> = 3.85&ndash;4.18 and predicted creep rupture time of 2.5&ndash;5.1 &times; 10<sup>3</sup> h at 650&deg;C. These results demonstrate an interpretable framework for the creep-fatigue-informed design of RAFM steels under fusion-relevant operating conditions.
+                        Designing reduced-activation ferritic-martensitic (RAFM) steels capable of simultaneously resisting creep deformation and low-cycle fatigue (LCF) damage is a key requirement for structural materials in future fusion demonstration reactors (DEMO), where components are exposed to elevated temperatures and cyclic loading. However, achieving balanced creep-fatigue performance remains challenging because the mechanisms governing long-term creep rupture and cyclic plasticity are fundamentally different and often conflicting. In this study, two complementary surrogate models are developed to address this creep-fatigue design challenge: a dual-mechanism physics-informed neural networks (PINNs) for predicting creep rupture behaviour and a multi-layer perceptron (MLP) model for LCF performance. The models are trained on consolidated datasets including experimental creep rupture data, cyclic fatigue properties, alloy compositions and thermophysical descriptors. The creep PINN achieves <span class="inline-math">R<sup>2</sup></span> = 0.96 and captures the transition from stress-controlled dislocation creep at lower homologous temperatures (<span class="inline-math">T/T<sub>m</sub></span> &lt; 0.4, where <span class="inline-math">T<sub>m</sub></span> represents the alloy melting temperature) to diffusion-dominated behaviour at higher temperatures (<span class="inline-math">T/T<sub>m</sub></span> &ge; 0.4), corresponding approximately to 500&ndash;600&deg;C for typical RAFM steels, while the fatigue MLP attains <span class="inline-math">R<sup>2</sup></span> = 0.97. Model interpretability based on SHAP (SHapley Additive exPlanations) reveals temperature-dependent shifts in creep kinetics and identifies the total strain range (<span class="inline-math">&Delta;&epsilon;<sub>total</sub></span>), temperature and Cr&ndash;W&ndash;Ta alloying interactions associated with precipitation strengthening as key factors influencing LCF behaviour. Feature interaction analysis based on SHAP interaction values further indicates cooperative Cr&ndash;W&ndash;Ta strengthening at lower temperatures and degradation-dominated behaviour at higher temperatures. Integrating both surrogate models into a multi-objective optimisation framework based on Non-dominated Sorting Genetic Algorithm II (NSGA-II) generated a Pareto front of alloy compositions with improved predicted creep rupture life and fatigue life compared with Eurofer97, achieving <span class="inline-math">log<sub>10</sub>N<sub>f</sub></span> = 3.85&ndash;4.18 and predicted creep rupture time of 2.5&ndash;5.1 &times; <span class="inline-math">10<sup>3</sup></span> h at 650&deg;C. These results demonstrate an interpretable framework for the creep-fatigue-informed design of RAFM steels under fusion-relevant operating conditions.
+
+
+                        
 
 
                     <p style="font-style: italic; font-size: 18px; color: #6E44FF; margin-top: 15px; text-align: center;">
